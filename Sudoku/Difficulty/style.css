@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&family=Fredoka:wght@300;400&family=Jockey+One&family=Nunito+Sans:opsz,wght@6..12,300&family=Open+Sans&family=Poppins:wght@100;300;400&family=Roboto+Condensed&family=Roboto:wght@300&family=Signika:wght@400;700&display=swap');
+
+*{
+    font-family: 'Jockey One', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 300;
+    text-align: center;
+}
+
+body{
+    
+    background: #E6E6E6;
+}
+
+
+.heading{
+    font-size: 550%;
+    margin-top: 25px;
+}
+
+.title{
+    font-size: 400%;
+    margin-top: 5vh;
+}
+
+
+.back-img{
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 4%;
+    left: 2%;
+}
+
+.dark-mode-img{
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 4%;
+    right: 2%;
+}
+
+.inst{
+    width: 45px;
+    height: 45px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 4%;
+    right: 7%;
+    margin-top: 2.5px;
+}
+
+.dif{
+    margin-top: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box{
+    width: 16vw;
+    border: 2px solid black;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 250%;
+    background-color: #D9D9D9;
+    position: absolute;
+}
+
+.backbox{
+    width: 16vw;
+    height: 35vh;
+    background-color: #6a6a6a;
+    margin-left: 1vw;
+    margin-top: 2vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 250%;
+    
+}
+
+.goback:hover{
+    cursor: pointer;
+}
+
+.hover:hover{
+    cursor: pointer;
+}

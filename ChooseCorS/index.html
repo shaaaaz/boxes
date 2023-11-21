@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOXES - Choose</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="heading">Hey! What would you like to play today?</h1>
+
+    <div class="parts">
+
+        <div onclick="crossword()" class="button1">
+            <img class="button-img" src="../Images/Crossword.png" alt="Crossword">
+            <div class="wide">
+                <h2 class="button-text">CROSSWORD</h2>
+            </div>
+        </div>
+
+        <div onclick="sudoku()" class="button1">
+            <img class="button-img" src="../Images/Sudoku.png" alt="Sudoku">
+            <div class="wide">
+                <h2 class="button-text">SUDOKU</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="goback" onclick="goback()" >
+        <img src="../Images/arrow.png" alt="" class="back-img">
+    </div>
+
+    <div class="goback ">
+        <img src="../Images/dark-mode.png" alt="" class="dark-mode-img">
+    </div>
+    
+</body>
+<script src="app.js"></script>
+</html>
