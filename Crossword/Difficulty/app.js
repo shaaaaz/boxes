@@ -27,7 +27,7 @@ function push(){
     b.style.backgroundColor = "#D9D9D9"
     b.style.border = "2px solid black"
 
-    window.location.href = "../Game/index.html"
+    window.location.href = "../GameMovies/index.html"
 }
 
 const shift2 = document.querySelector(".box2")
@@ -41,7 +41,7 @@ function push2(){
     
     b2.style.backgroundColor = "#D9D9D9"
     b2.style.border = "2px solid black"
-    window.location.href = "../Game/index.html"
+    window.location.href = "../GamePlaces/index.html"
 }
 
 
@@ -56,7 +56,7 @@ function push3(){
     
     b3.style.backgroundColor = "#D9D9D9"
     b3.style.border = "2px solid black"
-    window.location.href = "../Game/index.html"
+    window.location.href = "../GameSports/index.html"
 }
 
 // var time = window.localStorage.getItem('timeSpent');

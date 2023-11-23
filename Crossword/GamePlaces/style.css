@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&family=Fredoka:wght@300;400&family=Jockey+One&family=Nunito+Sans:opsz,wght@6..12,300&family=Open+Sans&family=Poppins:wght@100;300;400&family=Roboto+Condensed&family=Roboto:wght@300&family=Signika:wght@400;700&display=swap');
+
+*{
+    font-family: 'Jockey One', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 300;
+    /* text-align: center; */
+}
+
+body{
+    
+    background: #E6E6E6;
+}
+
+
+.heading{
+    font-size: 550%;
+    margin-top: 25px;
+    text-align: center;
+}
+
+
+
+.back-img{
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 4%;
+    left: 2%;
+}
+
+.dark-mode-img{
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 4%;
+    right: 2%;
+}
+
+.inst{
+    width: 45px;
+    height: 45px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 4%;
+    right: 7%;
+    margin-top: 2.5px;
+}
+
+.goback:hover{
+    cursor: pointer;
+}
+
+
+.audio-img{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 4%;
+    right: 11.5%;
+    margin-top: 5px;
+}
+
+.area{
+    background-color: #bfbfbf36;
+    width: 85vw;
+    margin-left: 7.5vw;
+    height: 75vh;
+    border: solid 4px black;
+    display: flex;
+}
+
+.crosswordArea{
+    width: 58vw;
+    border-right: 2px solid black;
+}
+
+.hintsArea{
+    width: 27vw;
+    border-left: 2px solid black;
+}
+
+.hintsHead{
+    height: 12%;
+    border-bottom: 4px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 300%;
+}
+
+.hints1{
+    height: 44%;
+    border-bottom: 4px solid black;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.hints2{
+    height: 44%;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.whichHints{
+    color: rgb(0, 0, 0);
+    text-align: start;
+    font-size: 270%;
+    position: sticky;
+}
+
+.downHints{
+    color: #555555;
+    font-size: 170%;
+    line-height: 150%;
+    text-align: start;
+    margin-left: 25px;
+}
+
+.acrossHints{
+    color: #555555;
+    font-size: 170%;
+    line-height: 150%;
+    text-align: start;
+    margin-left: 25px;
+}
+
+.playingArea{
+    /* background-color: cadetblue; */
+    height: 82%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons{
+    /* background-color: rgb(67, 86, 87); */
+    height: 18%;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    /* margin-top: 7vh; */
+    margin-right: 1.1vw;
+    /* margin-bottom: 3vh; */
+}
+
+.exit1{
+    background-color: #cacaca;
+    width: 12vw;
+    height: 8.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 220%;
+    border: 2px solid black;
+    position: absolute;
+}
+
+.exit2{
+    background-color: #D9D9D9;
+    width: 12vw;
+    height: 8.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 220%;
+    border: 2px solid black;
+    z-index: -100;
+    margin-top: 1vh;
+    margin-left: 0.5vw;
+    margin-right: 2.5vw;
+}
+
+.again1{
+    background-color: #cacaca;
+    width: 13vw;
+    height: 8.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 220%;
+    border: 2px solid black;
+    position: absolute;
+}
+
+.again2{
+    background-color: #D9D9D9;
+    width: 13vw;
+    height: 8.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 220%;
+    border: 2px solid black;
+    z-index: -100;
+    margin-top: 1vh;
+    margin-left: 0.5vw;
+}
+
+.again:hover,.exit:hover{
+    cursor: pointer;
+}
+
+.cells{
+    width: 44px;
+    height: 44px;
+    background-color: #ffffff;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(91, 91, 91);
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 170%;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ .hide{
+    background-color: #55555500;
+    border: none;
+} 
+
+.inputValue{
+    width: 12vw;
+    height: 9vh;
+    font-size: 250%;
+    text-align: center;
+}
+
+.check1{
+    height: 100px;
+    width: 10vw;
+    height: 8vh;
+    /* margin-left: 1vw;
+    margin-right: 1vw; */
+    background-color: #cacaca;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    font-size: 220%;
+    position: absolute;
+
+}
+
+.check2{
+    height: 100px;
+    width: 10vw;
+    height: 8vh;
+    margin-left: 0.5vw;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    font-size: 220%;
+    z-index: -1;
+    margin-top: 1vh;
+
+}
+
+.check{
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+.check:hover{
+    cursor: pointer;
+}
+
+.topright{
+    align-items: start;
+    font-size: 140%;
+    justify-content: end;
+    /* margin-right: 3px */
+    padding-top: 3px;
+    padding-right: 5px;
+}
+
+.bottomleft{
+    align-items: end;
+    font-size: 140%;
+    justify-content: start;
+    /* margin-right: 3px */
+    padding-bottom: 3px;
+    padding-left: 5px;
+}
+
+.california1,
+.california2,
+.california3,
+.california4,
+.california5,
+.california6,
+.california7,
+.california8,
+.california9,
+.tokyo1,
+.tokyo2,
+.tokyo3,
+.tokyo4,
+.paris1,
+.paris2,
+.paris3,
+.paris4,
+.naples1,
+.canada1,
+.canada2,
+.canada3,
+.canada4,
+.canada5 {
+  border-right: none;
+}
+
+.canada1,
+.canada2,
+.canada3,
+.canada4,
+.canada5,
+.naples1,
+.naples2,
+.naples3,
+.naples4,
+.naples5,
+.brazil1,
+.brazil2,
+.brazil3,
+.brazil4,
+.brazil5,
+.india1,
+.india2,
+.india3,
+.india4,
+.newyork1,
+.newyork2,
+.newyork3,
+.newyork4,
+.newyork5,
+.newyork6,
+.ethiopia1,
+.ethiopia2,
+.ethiopia3,
+.ethiopia4,
+.ethiopia5,
+.ethiopia6,
+.ethiopia7,
+.california8,
+.california10 {
+  border-bottom: none;
+}
+
+::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 0%, 66%);
+    outline: 1px solid rgb(54, 54, 54);
+  }
