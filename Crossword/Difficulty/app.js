@@ -26,7 +26,7 @@ function push(){
     
     b.style.backgroundColor = "#D9D9D9"
     b.style.border = "2px solid black"
-
+    localStorage.setItem("ThemeChoosen",1)
     window.location.href = "../GameMovies/index.html"
 }
 
@@ -41,6 +41,7 @@ function push2(){
     
     b2.style.backgroundColor = "#D9D9D9"
     b2.style.border = "2px solid black"
+    localStorage.setItem("ThemeChoosen",2)
     window.location.href = "../GamePlaces/index.html"
 }
 
@@ -56,6 +57,7 @@ function push3(){
     
     b3.style.backgroundColor = "#D9D9D9"
     b3.style.border = "2px solid black"
+    localStorage.setItem("ThemeChoosen",3)
     window.location.href = "../GameSports/index.html"
 }
 

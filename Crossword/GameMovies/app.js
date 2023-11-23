@@ -17,6 +17,10 @@ openingAudio.pause()
 openingAudio.currentTime = time;
 openingAudio.play()
 
+window.onload = function(){
+    startTimer()
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const start = new Date().getTime();
     window.addEventListener("beforeunload", () => {
@@ -146,6 +150,7 @@ function execute(){
         brad2.innerHTML = "R"
         brad3.innerHTML = "A"
         brad4.innerHTML = "D"
+        percent += 10
     }
     else if(str == 'heath'){
         heath1.innerHTML = "H"
@@ -153,6 +158,7 @@ function execute(){
         heath3.innerHTML = "A"
         heath4.innerHTML = "T"
         heath5.innerHTML = "H"
+        percent += 10
     }
     else if(str == 'emma')
     {
@@ -160,6 +166,7 @@ function execute(){
         emma2.innerHTML = "M"
         emma3.innerHTML = "M"
         emma4.innerHTML = "A"
+        percent += 10
     }
     else if(str=='tyler'){
         tyler1.innerHTML = "T"
@@ -167,6 +174,7 @@ function execute(){
         tyler3.innerHTML = "L"
         tyler4.innerHTML = "E"
         tyler5.innerHTML = "R"
+        percent += 10
     }
     else if(str=='swades'){
         swades1.innerHTML = "S"
@@ -175,6 +183,7 @@ function execute(){
         swades4.innerHTML = "D"
         swades5.innerHTML = "E"
         swades6.innerHTML = "S"
+        percent += 10
     }
     else if(str=='damien'){
         damien1.innerHTML = "D"
@@ -183,6 +192,7 @@ function execute(){
         damien4.innerHTML = "I"
         damien5.innerHTML = "E"
         damien6.innerHTML = "N"
+        percent += 10
     }
     else if(str == 'waiter'){
         waiter1.innerHTML = "W"
@@ -191,6 +201,7 @@ function execute(){
         waiter4.innerHTML = "T"
         waiter5.innerHTML = "E"
         waiter6.innerHTML = "R"
+        percent += 10
     }
     else if(str=='tamasha'){
         tamasha1.innerHTML = "T"
@@ -200,6 +211,7 @@ function execute(){
         tamasha5.innerHTML = "S"
         tamasha6.innerHTML = "H"
         tamasha7.innerHTML = "A"
+        percent += 10
     }
     else if(str=='hirani'){
         hirani1.innerHTML="H"
@@ -208,14 +220,27 @@ function execute(){
         hirani4.innerHTML="A"
         hirani5.innerHTML="N"
         hirani6.innerHTML="I"
+        percent += 10
     }
     else if(str == 'race'){
         race1.innerHTML = "R"
         race2.innerHTML = "A"
         race3.innerHTML = "C"
         race4.innerHTML = "E"
+        percent += 10
     }
-    
+    else{
+        errors++
+        console.log(errors)
+    }
+    moves++
+    errNo.innerHTML = errors
+    movesNo.innerHTML = moves
+    localStorage.setItem("percentCW1",percent)
+    localStorage.setItem("errorsCW1",errors)
+    localStorage.setItem("minsCW1",minutes)
+    localStorage.setItem("secondsCW1",seconds)
+    localStorage.setItem("movesCW1",moves)
 }
 let n = localStorage.getItem("name")
 console.log(n)
@@ -230,3 +255,36 @@ function checkStr(){
             execute()
         }
     });
+
+    let [minutes, seconds] = [0, 0]
+let timeRef = document.querySelector(".timer");
+let int = null;
+
+
+function startTimer() {
+    console.log("HELLOO")
+    if (int !== null) {
+        clearInterval(int);
+    }
+    int = setInterval(displayTimer, 1000);
+}
+
+function displayTimer() {
+    seconds++;
+    if (seconds == 60) {
+        seconds = 0;
+        minutes++;
+    }
+
+    let m = minutes < 10 ? "0" + minutes : minutes;
+    let s = seconds < 10 ? "0" + seconds : seconds;
+
+    timeRef.innerHTML = `${m} : ${s}`;
+}
+
+let errors = 0
+let moves = 0
+let percent = 0
+const errNo =  document.querySelector(".errNo")
+const movesNo = document.querySelector(".movesNo")
+

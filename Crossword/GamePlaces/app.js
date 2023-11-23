@@ -151,6 +151,7 @@ function execute(){
         canada4.innerHTML = "A";
         canada5.innerHTML = "D";
         canada6.innerHTML = "A";
+        percent+=11
     }
     else if (str == 'naples') {
         naples1.innerHTML = "N";
@@ -159,6 +160,7 @@ function execute(){
         naples4.innerHTML = "L";
         naples5.innerHTML = "E";
         naples6.innerHTML = "S";
+        percent+=11
     }
     else if (str == 'brazil') {
         brazil1.innerHTML = "B";
@@ -167,6 +169,7 @@ function execute(){
         brazil4.innerHTML = "Z";
         brazil5.innerHTML = "I";
         brazil6.innerHTML = "L";
+        percent+=11
     } 
     else if (str == 'india') {
         india1.innerHTML = "I";
@@ -174,6 +177,7 @@ function execute(){
         india3.innerHTML = "D";
         india4.innerHTML = "I";
         india5.innerHTML = "A";
+        percent+=11
     } 
     else if (str == 'newyork') {
         newyork1.innerHTML = "N";
@@ -183,6 +187,7 @@ function execute(){
         newyork5.innerHTML = "O";
         newyork6.innerHTML = "R";
         newyork7.innerHTML = "K";
+        percent+=11
     } 
     else if (str == 'ethiopia') {
         ethiopia1.innerHTML = "E";
@@ -193,12 +198,14 @@ function execute(){
         ethiopia6.innerHTML = "P";;
         ethiopia7.innerHTML = "I";
         ethiopia8.innerHTML = "A";
+        percent+=11
     } else if (str == 'tokyo') {
         tokyo1.innerHTML = "T";
         tokyo2.innerHTML = "O";
         tokyo3.innerHTML = "K";
         tokyo4.innerHTML = "Y";
         tokyo5.innerHTML = "O";
+        percent+=11
     }
     else if (str == 'paris') {
         paris1.innerHTML = "P";
@@ -206,6 +213,7 @@ function execute(){
         paris3.innerHTML = "R";
         paris4.innerHTML = "I";
         paris5.innerHTML = "S";
+        percent+=11
     } 
     else if (str == 'california') {
         california1.innerHTML = "C";
@@ -218,7 +226,20 @@ function execute(){
         california8.innerHTML = "N";
         california9.innerHTML = "I";
         california10.innerHTML = "A";
+        percent+=12
     }
+    else{
+        errors++
+        console.log(errors)
+    }
+    moves++
+    errNo.innerHTML = errors
+    movesNo.innerHTML = moves
+    localStorage.setItem("percentCW2",percent)
+    localStorage.setItem("errorsCW2",errors)
+    localStorage.setItem("minsCW2",minutes)
+    localStorage.setItem("secondsCW2",seconds)
+    localStorage.setItem("movesCW2",moves)
 }
 
 document.addEventListener("keyup", function(event) {
@@ -226,4 +247,39 @@ document.addEventListener("keyup", function(event) {
         execute()
     }
 });
+
+window.onload = function(){
+    startTimer()
+}
+let [minutes, seconds] = [0, 0]
+let timeRef = document.querySelector(".timer");
+let int = null;
+
+
+function startTimer() {
+    console.log("HELLOO")
+    if (int !== null) {
+        clearInterval(int);
+    }
+    int = setInterval(displayTimer, 1000);
+}
+
+function displayTimer() {
+    seconds++;
+    if (seconds == 60) {
+        seconds = 0;
+        minutes++;
+    }
+
+    let m = minutes < 10 ? "0" + minutes : minutes;
+    let s = seconds < 10 ? "0" + seconds : seconds;
+
+    timeRef.innerHTML = `${m} : ${s}`;
+}
+
+let errors = 0
+let moves = 0
+let percent = 0
+const errNo =  document.querySelector(".errNo")
+const movesNo = document.querySelector(".movesNo")
 

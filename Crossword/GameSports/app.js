@@ -133,22 +133,26 @@ function execute(){
         nadal3.innerHTML = "D";
         nadal4.innerHTML = "A";
         nadal5.innerHTML = "L";
+        percent+=12.5
     } else if (str == 'kobe') {
         kobe1.innerHTML = "K";
         kobe2.innerHTML = "O";
         kobe3.innerHTML = "B";
         kobe4.innerHTML = "E";
+        percent+=12.5
     } else if (str == 'tyson') {
         tyson1.innerHTML = "T";
         tyson2.innerHTML = "Y";
         tyson3.innerHTML = "S";
         tyson4.innerHTML = "O";
         tyson5.innerHTML = "N";
+        percent+=12.5
     } else if (str == 'bolt') {
         bolt1.innerHTML = "B";
         bolt2.innerHTML = "O";
         bolt3.innerHTML = "L";
         bolt4.innerHTML = "T";
+        percent+=12.5
     } else if (str == 'jordan') {
         jordan1.innerHTML = "J";
         jordan2.innerHTML = "O";
@@ -156,6 +160,7 @@ function execute(){
         jordan4.innerHTML = "D";
         jordan5.innerHTML = "A";
         jordan6.innerHTML = "N";
+        percent+=12.5
     } else if (str == 'football') {
         football1.innerHTML = "F";
         football2.innerHTML = "O";
@@ -165,6 +170,7 @@ function execute(){
         football6.innerHTML = "A";
         football7.innerHTML = "L";
         football8.innerHTML = "L";
+        percent+=12.5
     } else if (str == 'nehwal') {
         nehwal1.innerHTML = "N";
         nehwal2.innerHTML = "E";
@@ -172,6 +178,7 @@ function execute(){
         nehwal4.innerHTML = "W";
         nehwal5.innerHTML = "A";
         nehwal6.innerHTML = "L";
+        percent+=12.5
     } else if (str == 'phelps') {
         phelps1.innerHTML = "P";
         phelps2.innerHTML = "H";
@@ -179,8 +186,20 @@ function execute(){
         phelps4.innerHTML = "L";
         phelps5.innerHTML = "P";
         phelps6.innerHTML = "S";
+        percent+=12.5
     }
-    
+    else{
+        errors++
+        console.log(errors)
+    }
+    moves++
+    errNo.innerHTML = errors
+    movesNo.innerHTML = moves
+    localStorage.setItem("percentCW3",percent)
+    localStorage.setItem("errorsCW3",errors)
+    localStorage.setItem("minsCW3",minutes)
+    localStorage.setItem("secondsCW3",seconds)
+    localStorage.setItem("movesCW3",moves)
 }
 let n = localStorage.getItem("name")
 console.log(n)
@@ -193,3 +212,40 @@ document.addEventListener("keyup", function(event) {
         execute()
     }
 });
+
+window.onload = function(){
+    startTimer()
+}
+
+let [minutes, seconds] = [0, 0]
+let timeRef = document.querySelector(".timer");
+let int = null;
+
+
+function startTimer() {
+    console.log("HELLOO")
+    if (int !== null) {
+        clearInterval(int);
+    }
+    int = setInterval(displayTimer, 1000);
+}
+
+function displayTimer() {
+    seconds++;
+    if (seconds == 60) {
+        seconds = 0;
+        minutes++;
+    }
+
+    let m = minutes < 10 ? "0" + minutes : minutes;
+    let s = seconds < 10 ? "0" + seconds : seconds;
+
+    timeRef.innerHTML = `${m} : ${s}`;
+}
+
+let errors = 0
+let moves = 0
+let percent = 0
+const errNo =  document.querySelector(".errNo")
+const movesNo = document.querySelector(".movesNo")
+

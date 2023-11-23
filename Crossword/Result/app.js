@@ -18,19 +18,109 @@ function click1(){
     window.location.href = "../Difficulty/index.html";
 }
 
+
+
+
+
+var theme = localStorage.getItem("ThemeChoosen")
+
+console.log(theme)
+
+var percent = 0
+var errors = 0
+var mins = 0
+var seconds = 0
+var moves = 0
+
+if(theme==1){
+    percent = localStorage.getItem("percentCW1")
+    errors = localStorage.getItem("errorsCW1")
+    mins = localStorage.getItem("minsCW1")
+    seconds = localStorage.getItem("secondsCW1")
+    moves = localStorage.getItem("movesCW1")
+}
+else if(theme==2){
+percent = localStorage.getItem("percentCW2")
+    errors = localStorage.getItem("errorsCW2")
+    mins = localStorage.getItem("minsCW2")
+    seconds = localStorage.getItem("secondsCW2")
+    moves = localStorage.getItem("movesCW2")
+}
+else{
+    percent = localStorage.getItem("percentCW3")
+    errors = localStorage.getItem("errorsCW3")
+    mins = localStorage.getItem("minsCW3")
+    seconds = localStorage.getItem("secondsCW3")
+    moves = localStorage.getItem("movesCW3")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const openingAudio = new Audio("../../Audio/Gonna Fly Now.mp3")
+
+
+
+openingAudio.pause()
+openingAudio.currentTime = 1;
+
 window.onload = function(){
-    startTimer()
+    openingAudio.play()
+
 }
 
-function timerConvert(ms) {
-	let minutes = Math.floor(ms / 60000);
-	let seconds = Math.floor((ms % 60000) / 1000);
-	return (seconds == 60)? (minutes + 1) + ':00' : minutes + ':' + ((seconds < 10)? '0' : '') + seconds;
+
+
+
+
+
+
+// console.log(percent,errors,mins,seconds,moves)
+
+// let percent =99
+// let mins = 4
+// let seconds =56
+// let errors = 56
+
+pDisplay = document.querySelector(".perc")
+
+if(percent<20){
+    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right. Looks like you have not enjoyed Crossword. How about you try Sudoku instead?`
+}
+else if(percent<40){
+    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right. Try to focus more and you will achieve it!`
+}
+else if(percent<60){
+    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right. This proves you have a lot of potential. You could do better!`
+}
+else if(percent<80){
+    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right. Its like crosswords are easy for you. Keep up the good work!`
+}
+else if(percent<90){
+    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right. WOW! That was a fabulous display of your Vocabulary, General Knowledge and Thinking skills`
+}
+else{
+    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right.That was just SPECTACULAR! A great victory over crosswords!!!`
 }
 
-function startTimer(){
-	timer = setInterval(function() {
-		seconds = seconds + 1000;
-		document.getElementsByClassName('scoreValue')[0].innerText = timerConvert(seconds);
-	}, 1000);
-}
+const t = document.querySelector(".time")
+
+t.innerHTML = `Time taken for you to solve the puzzle is <span class="red">${mins}</span> minutes and <span class="red">${seconds}</span> seconds.</span>`
+
+const err = document.querySelector(".error")
+
+err.innerHTML = `No of errors commited are - <span class="red">${errors}</span> & No of Moves taken are - <span class="red">${moves}</span>`

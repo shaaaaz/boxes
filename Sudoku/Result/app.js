@@ -49,22 +49,22 @@ console.log(percent,errors,mins,seconds)
 pDisplay = document.querySelector(".perc")
 
 if(percent<20){
-    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right. Looks like you have not enjoyed Sudoku. How about you try Crossword instead?`
+    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the sudoku right. Looks like you have not enjoyed Sudoku. How about you try Crossword instead?`
 }
 else if(percent<40){
-    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right. Try to focus more and you will achieve it!`
+    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the sudoku right. Try to focus more and you will achieve it!`
 }
 else if(percent<60){
-    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right. This proves you have a lot of potential. You could do better!`
+    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the sudoku right. This proves you have a lot of potential. You could do better!`
 }
 else if(percent<80){
-    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right. Its like numbers are easy for you. Keep up the good work!`
+    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the sudoku right. Its like numbers are easy for you. Keep up the good work!`
 }
 else if(percent<90){
-    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right. WOW! That was a fabulous display of your Concentration and Thinking skills`
+    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the sudoku right. WOW! That was a fabulous display of your Concentration and Thinking skills`
 }
 else{
-    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right.That was just SPECTACULAR! A great victory over number!!!`
+    pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the sudoku right.That was just SPECTACULAR! A great victory over number!!!`
 }
 
 const t = document.querySelector(".time")
