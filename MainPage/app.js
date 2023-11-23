@@ -10,7 +10,25 @@ function start(){
 
     var n = name1.value
     var n2 = nick.value
-      
+
+    var isPure = containsNumbers(n)
+
+    console.log(isPure)
+
+    var isPureNum = false
+
+    if(isPure)
+    {
+        alert("Enter a proper name which doesnt contain numbers")
+        return
+    }
+
+    if(n[0] ==1 || n[0] == 2 || n[0] == 3 || n[0] == 4 || n[0] == 5 || n[0] == 6 || n[0] == 7 || n[0] == 8 || n[0] == 9 || n[0] == 0)
+      {
+        isPureNum=true
+        alert("Enter a name which doesnt contain numbers!")
+        return
+      }
 console.log("n=",n,n2)
     if(n=="" || n2==""){
         console.log("again")
@@ -83,3 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 localStorage.setItem('sound', true);
 
+function containsNumbers(str) {
+    return /\d/.test(str);
+  }
