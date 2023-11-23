@@ -19,6 +19,8 @@ function push(){
     b.style.backgroundColor = "#D9D9D9"
     b.style.border = "2px solid black"
 
+    localStorage.setItem("sudokuDifficulty",1)
+
     window.location.href = "../Game/index.html"
 }
 
@@ -33,6 +35,8 @@ function push2(){
     
     b2.style.backgroundColor = "#D9D9D9"
     b2.style.border = "2px solid black"
+
+    localStorage.setItem("sudokuDifficulty",2)
 
     window.location.href = "../Game/index.html"
 }
@@ -50,5 +54,35 @@ function push3(){
     b3.style.backgroundColor = "#D9D9D9"
     b3.style.border = "2px solid black"
 
+    localStorage.setItem("sudokuDifficulty",3)
+
     window.location.href = "../Game/index.html"
 }
+
+var time = window.localStorage.getItem('timeSpent');
+time = parseFloat(time)
+
+const openingAudio = new Audio("../../Audio/MainPage.mp3")
+
+console.log(time)
+
+openingAudio.pause()
+openingAudio.currentTime = time;
+openingAudio.play()
+
+document.addEventListener("DOMContentLoaded", () => {
+    const start = new Date().getTime();
+    window.addEventListener("beforeunload", () => {
+        var end = new Date().getTime();
+        var totalTime = (end - start) / 1000
+
+        totalTime += time
+
+        totalTime = JSON.stringify(totalTime); 
+
+        localStorage.removeItem('timeSpent')
+        localStorage.setItem('timeSpent', totalTime);
+
+        console.log(totalTime)
+    });
+});

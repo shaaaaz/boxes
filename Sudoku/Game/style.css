@@ -56,3 +56,187 @@ body{
 .goback:hover{
     cursor: pointer;
 }
+
+.audio-img{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 4%;
+    right: 11.5%;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+/* 
+
+MAIN GAME!!
+
+*/
+
+.playingArea{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+
+#err {
+    color: rgb(255, 68, 0);
+    font-size: 550%;
+    /* width: 350px;
+    height: 240px;
+    border: 4px solid black;
+    background-color: rgba(188, 188, 188, 0.643); */
+}
+
+#board {
+    width: 582px;
+    height: 582px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 30px;
+
+    border: 3px solid black
+}
+
+.tile {
+    width: 64px; 
+    height: 64px;
+    border: 1px solid rgb(199, 199, 199);
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#digits {
+    width: 280px;
+    height: 280px;
+
+    /* background-color: aquamarine; */
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    width: 80px; 
+    height: 80px;
+    border: 2px solid black;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 7px;
+}
+
+.newGame{
+    width: 260px;
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 5px;
+    background-color: rgb(213, 213, 213);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 200%;
+    border:3px solid black;
+    border-radius: 7px;
+}
+
+.number-selected {
+    background-color: rgba(171, 171, 171, 0.614);
+}
+
+.tile-start {
+    background-color: whitesmoke;
+}
+
+.horizontal-line {
+    border-bottom: 1px solid black;
+}
+
+.vertical-line {
+    border-right: 1px solid black;
+}
+
+.row-border{
+    border-top: 1px solid black;
+}
+
+.column-border{
+    border-left: 1px solid black;
+}
+
+.newGame:hover{
+    cursor: pointer;
+}
+
+.number:hover{
+    cursor: pointer;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.again1{
+    background-color: #B7B7B7;
+    width: 13vw;
+    height: 8.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 220%;
+    border: 2px solid black;
+    position: absolute;
+}
+
+.again2{
+    background-color: #D9D9D9;
+    width: 13vw;
+    height: 8.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 220%;
+    border: 2px solid black;
+    z-index: -100;
+    margin-top: 1vh;
+    margin-left: 0.5vw;
+}
+
+.again:hover{
+    cursor: pointer;
+}
+
+.again{
+    position: absolute;
+    right: 3%;
+    bottom: 2%;
+}
+
+.df{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-between;
+}
+
+.scoreValue{
+    font-size: 300%;
+    margin-bottom: 50px;
+}

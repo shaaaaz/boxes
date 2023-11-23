@@ -1,21 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOXES - Choose</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <h1 class="heading">SUDOKU</h1>
 
 
-    
 
-    
+    <!-- 9x9 board -->
+    <div class="playingArea">
+        <div class="df">
+            <div class="scoreValue">0:00</div>
+            <h2 id="err">
 
-    <div class="goback" onclick="goback()" >
+                ERRORS
+                <div id="errors">
+                    0
+                </div>
+
+
+            </h2>
+
+        </div>
+
+
+        <div class="flex">
+            <div id="board">
+
+            </div>
+
+            <div>
+                <div id="digits">
+
+                </div>
+
+                <div class="newGame">
+                    NEW GAME
+                </div>
+            </div>
+        </div>
+        <div></div>
+    </div>
+
+
+
+    <div class="again" onmousedown="click1()">
+        <div class="again1">SUBMIT</div>
+        <div class="again2">SUBMIT</div>
+    </div>
+
+
+
+
+    <div class="goback" onclick="goback()">
         <img src="../../Images/arrow.png" alt="arrow" class="back-img">
     </div>
 
@@ -26,7 +70,12 @@
     <div class="goback" onclick="instructions()">
         <img src="../../Images/bulb.png" alt="intructions" class="inst">
     </div>
-    
+
+    <div class="goback ">
+        <img src="../../Images/Audio.png" alt="" class="audio-img">
+    </div>
+
 </body>
 <script src="app.js"></script>
+
 </html>

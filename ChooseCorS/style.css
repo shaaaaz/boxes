@@ -79,6 +79,17 @@ body{
     right: 2%;
 }
 
+.audio-img{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 4%;
+    right: 7%;
+    margin-top: 5px;
+}
+
 .goback:hover{
     cursor: pointer;
 }

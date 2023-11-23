@@ -56,3 +56,19 @@ body{
 .goback:hover{
     cursor: pointer;
 }
+
+
+.audio-img{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 4%;
+    right: 11.5%;
+    margin-top: 5px;
+}
+
+.area{
+    background-color: aquamarine;
+}

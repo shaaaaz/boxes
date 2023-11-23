@@ -18,3 +18,19 @@ function click1(){
     window.location.href = "../Difficulty/index.html";
 }
 
+window.onload = function(){
+    startTimer()
+}
+
+function timerConvert(ms) {
+	let minutes = Math.floor(ms / 60000);
+	let seconds = Math.floor((ms % 60000) / 1000);
+	return (seconds == 60)? (minutes + 1) + ':00' : minutes + ':' + ((seconds < 10)? '0' : '') + seconds;
+}
+
+function startTimer(){
+	timer = setInterval(function() {
+		seconds = seconds + 1000;
+		document.getElementsByClassName('scoreValue')[0].innerText = timerConvert(seconds);
+	}, 1000);
+}
