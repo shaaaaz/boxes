@@ -107,3 +107,37 @@ body{
     right: 11.5%;
     margin-top: 5px;
 }
+
+@media (max-width: 750px) {
+
+    .heading{
+        width: 68vw;
+        text-align: center;
+        margin-left: 16vw;
+        font-size: 14vw;
+    }
+
+    .inst{
+        top: 14%;
+        right: 2.5%;
+    }
+
+    .audio-img{
+        top: 24%;
+        right: 2.7%;
+    }
+
+    .title{
+        width: 68vw;
+        text-align: center;
+        margin-left: 16vw;
+        font-size: 5vw;
+        margin-top: 1vh;
+    }
+
+    .box,.backbox{
+        font-size: 4.5vw;
+        height: 24vh;
+    }
+
+}

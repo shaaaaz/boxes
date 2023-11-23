@@ -93,3 +93,51 @@ body{
 .goback:hover{
     cursor: pointer;
 }
+
+@media (max-width: 750px) {
+
+    .heading{
+        width: 68vw;
+        text-align: center;
+        margin-left: 16vw;
+        font-size: 8vw;
+    }
+
+    .audio-img{
+        right: 2.5%;
+        top: 14%;
+    }
+
+    .parts{
+        flex-direction: column;
+    }
+
+    .button1{
+        display: flex;
+        width: 70vw;
+        height: 60vw;
+        margin-bottom: 20px;
+    }
+
+    .button-text{
+        writing-mode: vertical-lr;
+            text-orientation: upright;
+            letter-spacing: 2px;
+            font-size: 4vw;
+    }
+
+    .button-img{
+        width: 60vw;
+        height: 57vw;
+        margin-top: 03px;
+    }
+
+    .wide{
+        width: 8vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 57vw;
+        border-left: 6px solid rgb(0, 0, 0);
+    }
+}
