@@ -379,6 +379,23 @@ body{
     height: 17vh;
   }
 
+.crosswordArea{
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: aquamarine; */
+}
+
+.flexx{
+    width: 100%;
+}
+
+.playingArea{
+    margin-top: 3vh;
+}
+
   @media (max-width: 750px) {
 
     .cells{
