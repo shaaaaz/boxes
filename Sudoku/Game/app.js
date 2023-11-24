@@ -768,6 +768,9 @@ var solutionMatrixHard = [
     ],
 ]
 
+const correctAudio = new Audio("../../Audio/correctSound.mp3")
+const wrongAudio = new Audio("../../Audio/wrongSound.mp3")
+
 // console.log(boardMatrixEasy[0])
 // var board = boardMatrixEasy[1]
 // var solution = solutionMatrixEasy[1]
@@ -917,10 +920,24 @@ function selectTile() {
         if (solution[r][c] == numSelected.id) {
             this.innerText = numSelected.id;
             countOfDone++
+
+            if(soundPage){
+                correctAudio.pause()
+                correctAudio.currentTime = 0
+                correctAudio.play()
+            }
+
+            
+
         }
         else {
             errors += 1;
             document.getElementById("errors").innerText = errors;
+            if(soundPage){
+                wrongAudio.pause()
+                wrongAudio.currentTime = 0
+                wrongAudio.play()
+            }
             document.getElementById("err").classList.add("changee")
             setTimeout(function () {
                 document.getElementById("err").classList.remove("changee")

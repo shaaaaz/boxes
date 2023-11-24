@@ -152,6 +152,11 @@ function execute(){
         canada5.innerHTML = "D";
         canada6.innerHTML = "A";
         percent+=11
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else if (str == 'naples') {
         naples1.innerHTML = "N";
@@ -161,6 +166,11 @@ function execute(){
         naples5.innerHTML = "E";
         naples6.innerHTML = "S";
         percent+=11
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else if (str == 'brazil') {
         brazil1.innerHTML = "B";
@@ -170,6 +180,11 @@ function execute(){
         brazil5.innerHTML = "I";
         brazil6.innerHTML = "L";
         percent+=11
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     } 
     else if (str == 'india') {
         india1.innerHTML = "I";
@@ -178,6 +193,11 @@ function execute(){
         india4.innerHTML = "I";
         india5.innerHTML = "A";
         percent+=11
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     } 
     else if (str == 'newyork') {
         newyork1.innerHTML = "N";
@@ -188,6 +208,11 @@ function execute(){
         newyork6.innerHTML = "R";
         newyork7.innerHTML = "K";
         percent+=11
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     } 
     else if (str == 'ethiopia') {
         ethiopia1.innerHTML = "E";
@@ -199,6 +224,11 @@ function execute(){
         ethiopia7.innerHTML = "I";
         ethiopia8.innerHTML = "A";
         percent+=11
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     } else if (str == 'tokyo') {
         tokyo1.innerHTML = "T";
         tokyo2.innerHTML = "O";
@@ -206,6 +236,11 @@ function execute(){
         tokyo4.innerHTML = "Y";
         tokyo5.innerHTML = "O";
         percent+=11
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else if (str == 'paris') {
         paris1.innerHTML = "P";
@@ -214,6 +249,11 @@ function execute(){
         paris4.innerHTML = "I";
         paris5.innerHTML = "S";
         percent+=11
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     } 
     else if (str == 'california') {
         california1.innerHTML = "C";
@@ -227,10 +267,20 @@ function execute(){
         california9.innerHTML = "I";
         california10.innerHTML = "A";
         percent+=12
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else{
         errors++
         console.log(errors)
+        if(soundPage){
+            wrongAudio.pause()
+            wrongAudio.currentTime = 0
+            wrongAudio.play()
+        }
         let errdiv = document.querySelector(".errors")
         console.log("hi im here")
         errdiv.classList.add("changee")
@@ -337,3 +387,6 @@ localStorage.setItem("percentCW2",percent)
     localStorage.setItem("minsCW2",minutes)
     localStorage.setItem("secondsCW2",seconds)
     localStorage.setItem("movesCW2",moves)
+
+    const correctAudio = new Audio("../../Audio/correctSound.mp3")
+const wrongAudio = new Audio("../../Audio/wrongSound.mp3")

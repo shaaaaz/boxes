@@ -160,6 +160,11 @@ function execute(){
         brad3.innerHTML = "A"
         brad4.innerHTML = "D"
         percent += 10
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else if(str == 'heath'){
         heath1.innerHTML = "H"
@@ -168,6 +173,11 @@ function execute(){
         heath4.innerHTML = "T"
         heath5.innerHTML = "H"
         percent += 10
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else if(str == 'emma')
     {
@@ -176,6 +186,11 @@ function execute(){
         emma3.innerHTML = "M"
         emma4.innerHTML = "A"
         percent += 10
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else if(str=='tyler'){
         tyler1.innerHTML = "T"
@@ -184,6 +199,11 @@ function execute(){
         tyler4.innerHTML = "E"
         tyler5.innerHTML = "R"
         percent += 10
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else if(str=='swades'){
         swades1.innerHTML = "S"
@@ -193,6 +213,11 @@ function execute(){
         swades5.innerHTML = "E"
         swades6.innerHTML = "S"
         percent += 10
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else if(str=='damien'){
         damien1.innerHTML = "D"
@@ -202,6 +227,11 @@ function execute(){
         damien5.innerHTML = "E"
         damien6.innerHTML = "N"
         percent += 10
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else if(str == 'waiter'){
         waiter1.innerHTML = "W"
@@ -211,6 +241,11 @@ function execute(){
         waiter5.innerHTML = "E"
         waiter6.innerHTML = "R"
         percent += 10
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else if(str=='tamasha'){
         tamasha1.innerHTML = "T"
@@ -221,6 +256,11 @@ function execute(){
         tamasha6.innerHTML = "H"
         tamasha7.innerHTML = "A"
         percent += 10
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else if(str=='hirani'){
         hirani1.innerHTML="H"
@@ -230,6 +270,11 @@ function execute(){
         hirani5.innerHTML="N"
         hirani6.innerHTML="I"
         percent += 10
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else if(str == 'race'){
         race1.innerHTML = "R"
@@ -237,10 +282,20 @@ function execute(){
         race3.innerHTML = "C"
         race4.innerHTML = "E"
         percent += 10
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else{
         errors++
         console.log(errors)
+        if(soundPage){
+            wrongAudio.pause()
+            wrongAudio.currentTime = 0
+            wrongAudio.play()
+        }
 
         let errdiv = document.querySelector(".errors")
         console.log("hi im here")
@@ -347,3 +402,6 @@ localStorage.setItem("errorsCW1",errors)
 localStorage.setItem("minsCW1",minutes)
 localStorage.setItem("secondsCW1",seconds)
 localStorage.setItem("movesCW1",moves)
+
+const correctAudio = new Audio("../../Audio/correctSound.mp3")
+const wrongAudio = new Audio("../../Audio/wrongSound.mp3")

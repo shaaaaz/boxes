@@ -134,12 +134,22 @@ function execute(){
         nadal4.innerHTML = "A";
         nadal5.innerHTML = "L";
         percent+=12.5
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     } else if (str == 'kobe') {
         kobe1.innerHTML = "K";
         kobe2.innerHTML = "O";
         kobe3.innerHTML = "B";
         kobe4.innerHTML = "E";
         percent+=12.5
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     } else if (str == 'tyson') {
         tyson1.innerHTML = "T";
         tyson2.innerHTML = "Y";
@@ -147,12 +157,22 @@ function execute(){
         tyson4.innerHTML = "O";
         tyson5.innerHTML = "N";
         percent+=12.5
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     } else if (str == 'bolt') {
         bolt1.innerHTML = "B";
         bolt2.innerHTML = "O";
         bolt3.innerHTML = "L";
         bolt4.innerHTML = "T";
         percent+=12.5
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     } else if (str == 'jordan') {
         jordan1.innerHTML = "J";
         jordan2.innerHTML = "O";
@@ -161,6 +181,11 @@ function execute(){
         jordan5.innerHTML = "A";
         jordan6.innerHTML = "N";
         percent+=12.5
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     } else if (str == 'football') {
         football1.innerHTML = "F";
         football2.innerHTML = "O";
@@ -171,6 +196,11 @@ function execute(){
         football7.innerHTML = "L";
         football8.innerHTML = "L";
         percent+=12.5
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     } else if (str == 'nehwal') {
         nehwal1.innerHTML = "N";
         nehwal2.innerHTML = "E";
@@ -179,6 +209,11 @@ function execute(){
         nehwal5.innerHTML = "A";
         nehwal6.innerHTML = "L";
         percent+=12.5
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     } else if (str == 'phelps') {
         phelps1.innerHTML = "P";
         phelps2.innerHTML = "H";
@@ -187,10 +222,20 @@ function execute(){
         phelps5.innerHTML = "P";
         phelps6.innerHTML = "S";
         percent+=12.5
+        if(soundPage){
+            correctAudio.pause()
+            correctAudio.currentTime = 0
+            correctAudio.play()
+        }
     }
     else{
         errors++
         console.log(errors)
+        if(soundPage){
+            wrongAudio.pause()
+            wrongAudio.currentTime = 0
+            wrongAudio.play()
+        }
         let errdiv = document.querySelector(".errors")
         console.log("hi im here")
         errdiv.classList.add("changee")
@@ -300,3 +345,6 @@ localStorage.setItem("percentCW3",percent)
     localStorage.setItem("minsCW3",minutes)
     localStorage.setItem("secondsCW3",seconds)
     localStorage.setItem("movesCW3",moves)
+
+    const correctAudio = new Audio("../../Audio/correctSound.mp3")
+const wrongAudio = new Audio("../../Audio/wrongSound.mp3")
