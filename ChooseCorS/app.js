@@ -1,17 +1,17 @@
 function crossword(){
-    localStorage.setItem("colorMode",whatTheme)
+    // localStorage.setItem("colorMode",whatTheme)
     window.location.href = "../Crossword/Difficulty/index.html" ;
 }
 
 function sudoku(){
-    localStorage.setItem("colorMode",whatTheme)
+    // localStorage.setItem("colorMode",whatTheme)
     window.location.href = "../Sudoku/Difficulty/index.html" ;
 }
 
 let n = localStorage.getItem("nickName")
 
 function goback(){
-    localStorage.setItem("colorMode",whatTheme)
+    // localStorage.setItem("colorMode",whatTheme)
     window.location.href = "../index.html";
 }
 
@@ -38,7 +38,7 @@ openingAudio.loop = true
 let soundOfChoose = localStorage.getItem("sound")
 
 window.onload = function(){
-    colorSwitch()
+    // colorSwitch()
     if(soundPage=="false"){
         console.log("HOAJ")
         audio.src = "../Images/No Audio.png"
