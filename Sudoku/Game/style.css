@@ -240,3 +240,112 @@ MAIN GAME!!
     font-size: 300%;
     margin-bottom: 50px;
 }
+
+@media (max-width: 750px) {
+
+    .heading{
+        width: 68vw;
+        text-align: center;
+        margin-left: 16vw;
+        font-size: 14vw;
+    }
+
+    .inst{
+        top: 14%;
+        right: 2.5%;
+    }
+
+    .audio-img{
+        top: 24%;
+        right: 2.7%;
+    }
+
+    .playingArea{
+        flex-direction: column;
+    }
+
+    .df{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 60vw;
+    }
+
+    .flex{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 4vw;
+    }
+
+    #err{
+        font-size: 7vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #errors{
+        margin-left: 5px;
+    }
+
+    .scoreValue{
+        font-size: 7vw;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+    #board{
+        width: 81vw;
+        height: 81vw;
+        /* margin:0px; */
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .tile{
+        /* width: 30px; */
+        width: 8.7vw;
+        height: 8.7vw;
+    }
+
+    #digits{
+        width: 81vw;
+        height: auto;
+        margin-top: 20px;
+        flex-wrap: nowrap;    
+}
+
+    .number{
+        margin: 3px;
+        width: 8vw;
+        height:8vw;
+    }
+
+    .shiftt{
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        justify-self: start;
+    }
+    .again{
+        position: relative;
+        float: right;
+        margin-bottom: 20px;
+        font-size: 3vw;
+    }
+
+    .again1,.again2{
+        width: 25vw;
+    }
+
+    .newGame{
+        width: 81vw;
+        height: 10vw;
+        margin: 0;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 6vw;
+    }
+}

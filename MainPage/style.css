@@ -145,12 +145,13 @@ input[type="text"]::placeholder {
     }
 
     .heading{
-        font-size: 1100%;
+        font-size: 30vw;
         margin-top: 0;
+        text-align: center;
     }
 
     .byshaaz{
-        font-size: 250%;
+        font-size: 6vw;
         margin-left: 40vw;
     }
 

@@ -128,3 +128,40 @@ body{
     right: 7%;
     margin-top: 5px;
 }
+
+@media (max-width: 750px) {
+
+    .heading{
+        width: 68vw;
+        text-align: center;
+        margin-left: 16vw;
+        font-size: 7vw;
+        width: 70vw;
+        margin-bottom: 50px;
+
+    }
+
+    
+
+    .audio-img{
+        top: 13%;
+        right: 2.7%;
+    }
+
+    .rulebox{
+        width: 89vw;
+        margin-left: 5.5vw;
+        height: auto;
+        margin-bottom: 5vh;
+    }
+
+    .head{
+        font-size: 7vw;
+    }
+
+    .rules{
+        font-size: 4vw;
+        margin-bottom: 3vh;
+    }
+
+}
