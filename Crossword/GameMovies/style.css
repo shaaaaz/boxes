@@ -438,7 +438,7 @@ body{
         margin-top: -13vh;
     }
     .downHints,.acrossHints{
-        font-size: 2.6vw;
+        font-size: 3.5vw;
     }
     .area{
         margin-bottom: 6vh;
@@ -476,5 +476,16 @@ body{
     .audio-img{
         right: 18vw;
         margin-top: 0;
+    }
+
+    .inputValue,.check1,.check2,.exit1,.exit2,.again1,.again2{
+        height: 8vw;
+        width: 15vw;
+        /* margin-top: -10vh; */
+    }
+
+    .buttons{
+        margin-top: -2.5vw;
+        margin-bottom: -2.5w;
     }
   }
