@@ -129,6 +129,11 @@ body{
     margin-top: 5px;
 }
 
+.rulebox{
+    height: auto;
+    margin-bottom: 10vh;
+}
+
 @media (max-width: 750px) {
 
     .heading{

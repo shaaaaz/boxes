@@ -74,3 +74,42 @@ t.innerHTML = `Time taken for you to solve the puzzle is <span class="red">${min
 const err = document.querySelector(".error")
 
 err.innerHTML = `No of errors commited are - <span class="red">${errors}</span>`
+
+window.onload = function(){
+    // startTimer()
+    if(soundPage=="false"){
+        console.log("HOAJ")
+        audio.src = "../../Images/No Audio.png"
+    }
+    else{
+        openingAudio.currentTime=10
+        openingAudio.play()
+    }
+}
+
+
+const audio = document.querySelector(".audio-img")
+
+let soundPage = localStorage.getItem("sound")
+console.log(soundPage)
+
+audio.onclick = function(){
+
+    
+
+    if(soundPage)
+    {
+        audio.src = "../../Images/No Audio.png"
+        localStorage.setItem("sound",false)
+        soundPage = false
+        openingAudio.pause()
+    }
+    else{
+        audio.src = "../../Images/Audio.png"
+        localStorage.setItem("sound",true)
+        soundPage = true
+        openingAudio.currentTime = 4
+        openingAudio.play()
+    }
+}
+

@@ -15,10 +15,19 @@ console.log(time)
 
 openingAudio.pause()
 openingAudio.currentTime = time;
-openingAudio.play()
+// openingAudio.play()
 
 window.onload = function(){
     startTimer()
+    if(soundPage=="false"){
+        console.log("HOAJ")
+        audio.src = "../../Images/No Audio.png"
+    }
+    else{
+        console.log("ck")
+        openingAudio.currentTime=3
+        openingAudio.play()
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -288,3 +297,33 @@ let percent = 0
 const errNo =  document.querySelector(".errNo")
 const movesNo = document.querySelector(".movesNo")
 
+
+
+const audio = document.querySelector(".audio-img")
+
+let soundPage = localStorage.getItem("sound")
+console.log(soundPage)
+
+
+//audio
+
+
+audio.onclick = function(){
+
+    
+
+    if(soundPage)
+    {
+        audio.src = "../../Images/No Audio.png"
+        localStorage.setItem("sound",false)
+        soundPage = false
+        openingAudio.pause()
+    }
+    else{
+        audio.src = "../../Images/Audio.png"
+        localStorage.setItem("sound",true)
+        soundPage = true
+        openingAudio.currentTime = 4
+        openingAudio.play()
+    }
+}

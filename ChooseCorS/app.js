@@ -6,6 +6,7 @@ function sudoku(){
     window.location.href = "../Sudoku/Difficulty/index.html" ;
 }
 
+let n = localStorage.getItem("nickName")
 
 function goback(){
     window.location.href = "../index.html";
@@ -24,22 +25,24 @@ time = parseFloat(time)
 
 const openingAudio = new Audio("../Audio/MainPage.mp3")
 
-console.log(time)
 
 
 
 openingAudio.pause()
 openingAudio.currentTime = time;
-let n = localStorage.getItem("nickName")
+openingAudio.loop = true
+
+let soundOfChoose = localStorage.getItem("sound")
 
 window.onload = function(){
-    // if(sound)
-    // {
-    openingAudio.play()
-    // }
-    console.log(n)
-    // if(null){
-        console.log("HEYYYY")
+    if(soundPage=="false"){
+        console.log("HOAJ")
+        audio.src = "../Images/No Audio.png"
+    }
+    else{
+        openingAudio.currentTime=3
+        openingAudio.play()
+    }
         h.innerHTML = `Hey ${n}! What would you like to play today? `
     // }
 }
@@ -63,27 +66,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+const audio = document.querySelector(".audio-img")
+
+let soundPage = localStorage.getItem("sound")
+console.log(soundPage)
 
 
 //audio
 
-const audio = document.querySelector(".audio-img")
-
-let sound = localStorage.getItem("sound")
-console.log(sound)
 
 audio.onclick = function(){
-    if(sound)
+
+    
+
+    if(soundPage)
     {
         audio.src = "../Images/No Audio.png"
         localStorage.setItem("sound",false)
-        sound = false
+        soundPage = false
         openingAudio.pause()
     }
     else{
         audio.src = "../Images/Audio.png"
         localStorage.setItem("sound",true)
-        sound = true
+        soundPage = true
         openingAudio.currentTime = 4
         openingAudio.play()
     }

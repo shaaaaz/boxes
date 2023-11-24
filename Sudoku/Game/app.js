@@ -834,10 +834,20 @@ var solutionMatrixHard = [
 
 window.onload = function () {
 
+    // startTimer()
+    if(soundPage=="false"){
+        console.log("HOAJ")
+        audio.src = "../../Images/No Audio.png"
+    }
+    else{
+        openingAudio.currentTime=10
+        openingAudio.play()
+    }
+
 startTimer()
     openingAudio.pause()
     openingAudio.currentTime = time;
-    openingAudio.play()
+
 
     // generateNum()
 
@@ -979,3 +989,32 @@ function calculatePercent(){
     localStorage.setItem("previous",num)
 
 }
+
+
+
+
+const audio = document.querySelector(".audio-img")
+
+let soundPage = localStorage.getItem("sound")
+console.log(soundPage)
+
+audio.onclick = function(){
+
+    
+
+    if(soundPage)
+    {
+        audio.src = "../../Images/No Audio.png"
+        localStorage.setItem("sound",false)
+        soundPage = false
+        openingAudio.pause()
+    }
+    else{
+        audio.src = "../../Images/Audio.png"
+        localStorage.setItem("sound",true)
+        soundPage = true
+        openingAudio.currentTime = 4
+        openingAudio.play()
+    }
+}
+

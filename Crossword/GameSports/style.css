@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-weight: 300;
+    overflow: hidden;
     /* text-align: center; */
 }
 
@@ -82,7 +83,7 @@ body{
 .crosswordArea{
     margin-top: 3vh;
     width: 58vw;
-    border-right: 2px solid black;
+    /* border-right: 2px solid black; */
 }
 
 .hintsArea{
@@ -365,4 +366,26 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+
+  .crosswordArea{
+    /* margin-right: 10px solid yellow; */
+    height: 690px;
+    /* background-color: rgba(102, 51, 153, 0.408); */
+  }
+
+  .area{
+    margin-bottom: 1vh;
+    /* height: 90vh; */
+    height: 670px;
+  }
+
+  .buttons{
+    margin-bottom: none;
+  }
+
+  .buttons{
+    position: relative;
+    height: 17vh;
   }

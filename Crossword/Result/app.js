@@ -9,7 +9,7 @@ function exit(){
     e1.style.display = "none"
     e2.style.backgroundColor = "#B7B7B7"
 
-    window.close()
+    window.location.href = "../../index.html"
 }
 
 function click1(){
@@ -79,11 +79,42 @@ openingAudio.pause()
 openingAudio.currentTime = 1;
 
 window.onload = function(){
-    openingAudio.play()
-
+    // startTimer()
+    if(soundPage=="false"){
+        console.log("HOAJ")
+        audio.src = "../../Images/No Audio.png"
+    }
+    else{
+        openingAudio.currentTime=0
+        openingAudio.play()
+    }
 }
 
 
+const audio = document.querySelector(".audio-img")
+
+let soundPage = localStorage.getItem("sound")
+console.log(soundPage)
+
+audio.onclick = function(){
+
+    
+
+    if(soundPage)
+    {
+        audio.src = "../../Images/No Audio.png"
+        localStorage.setItem("sound",false)
+        soundPage = false
+        openingAudio.pause()
+    }
+    else{
+        audio.src = "../../Images/Audio.png"
+        localStorage.setItem("sound",true)
+        soundPage = true
+        openingAudio.currentTime = 4
+        openingAudio.play()
+    }
+}
 
 
 

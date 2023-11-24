@@ -349,3 +349,7 @@ MAIN GAME!!
         font-size: 6vw;
     }
 }
+
+.goback:hover{
+    cursor: pointer;
+}
