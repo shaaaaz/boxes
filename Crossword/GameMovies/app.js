@@ -241,6 +241,15 @@ function execute(){
     else{
         errors++
         console.log(errors)
+
+        let errdiv = document.querySelector(".errors")
+        console.log("hi im here")
+        errdiv.classList.add("changee")
+            setTimeout(function () {
+                errdiv.classList.toggle("changee")
+            }, 2000);
+
+            
     }
     moves++
     errNo.innerHTML = errors
@@ -250,6 +259,10 @@ function execute(){
     localStorage.setItem("minsCW1",minutes)
     localStorage.setItem("secondsCW1",seconds)
     localStorage.setItem("movesCW1",moves)
+
+    if(percent==100){
+        click1()
+    }
 }
 let n = localStorage.getItem("name")
 console.log(n)
@@ -327,3 +340,10 @@ audio.onclick = function(){
         openingAudio.play()
     }
 }
+
+
+localStorage.setItem("percentCW1",percent)
+localStorage.setItem("errorsCW1",errors)
+localStorage.setItem("minsCW1",minutes)
+localStorage.setItem("secondsCW1",seconds)
+localStorage.setItem("movesCW1",moves)

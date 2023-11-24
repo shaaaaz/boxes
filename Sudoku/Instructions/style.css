@@ -170,3 +170,14 @@ body{
     }
 
 }
+
+img{
+    width: 400px;
+    height: 400px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

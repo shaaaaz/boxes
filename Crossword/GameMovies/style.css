@@ -489,3 +489,18 @@ body{
         margin-bottom: -2.5w;
     }
   }
+
+
+  .changee{
+    animation: colorChange 0.5s infinite alternate;
+}
+
+@keyframes colorChange {
+    from {
+        color: hsl(0, 100%, 50%);
+    }
+    to {
+        color: hsl(0, 100%, 80%);
+    }
+}
+

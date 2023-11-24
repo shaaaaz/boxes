@@ -921,6 +921,11 @@ function selectTile() {
         else {
             errors += 1;
             document.getElementById("errors").innerText = errors;
+            document.getElementById("err").classList.add("changee")
+            setTimeout(function () {
+                document.getElementById("err").classList.remove("changee")
+            }, 2000);
+
         }
     }
     console.log(countOfEmpty)

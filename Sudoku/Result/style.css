@@ -171,3 +171,16 @@ body{
 .goback:hover{
     cursor: pointer;
 }
+
+.red{
+    animation: colorChange 0.5s infinite alternate;
+}
+
+@keyframes colorChange {
+    from {
+        color: hsl(0, 0%, 0%);
+    }
+    to {
+        color: hsl(0, 0%, 68%);
+    }
+}
