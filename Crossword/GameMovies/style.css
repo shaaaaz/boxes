@@ -217,8 +217,8 @@ body{
 }
 
 .cells{
-    width: 55px;
-    height: 55px;
+    width: 3.4vw;
+    height: 3.4vw;
     background-color: #ffffff;
     border: 1px solid rgb(0, 0, 0);
     color: rgb(91, 91, 91);

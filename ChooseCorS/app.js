@@ -1,14 +1,17 @@
 function crossword(){
+    localStorage.setItem("colorMode",whatTheme)
     window.location.href = "../Crossword/Difficulty/index.html" ;
 }
 
 function sudoku(){
+    localStorage.setItem("colorMode",whatTheme)
     window.location.href = "../Sudoku/Difficulty/index.html" ;
 }
 
 let n = localStorage.getItem("nickName")
 
 function goback(){
+    localStorage.setItem("colorMode",whatTheme)
     window.location.href = "../index.html";
 }
 
@@ -35,6 +38,7 @@ openingAudio.loop = true
 let soundOfChoose = localStorage.getItem("sound")
 
 window.onload = function(){
+    colorSwitch()
     if(soundPage=="false"){
         console.log("HOAJ")
         audio.src = "../Images/No Audio.png"
@@ -97,3 +101,50 @@ audio.onclick = function(){
 
 const h = document.querySelector(".heading")
 
+// const dmimg = document.querySelector(".dark-mode-img")
+
+// // var whatTheme = localStorage.getItem("colorMode")
+//  var whatTheme = 2
+
+
+
+// const wide = document.querySelectorAll(".wide")
+
+// dmimg.onclick = function(){
+
+//     colorSwitch()
+// }
+
+
+// function colorSwitch(){
+
+//     console.log(whatTheme)
+//     if(whatTheme=="1"){
+
+//     document.body.style.backgroundColor = "#BBE8FE"
+
+//     wide.forEach(function(element) {
+//         element.style.backgroundColor = "#BBE8FE"
+//     });
+
+//     whatTheme = 2
+
+    
+//     }
+//     else if(whatTheme=="2"){
+
+//         document.body.style.backgroundColor = "#d6d6d6"
+
+
+//         wide.forEach(function(element) {
+//             element.style.backgroundColor = "#d6d6d6"
+//         });
+    
+//         whatTheme = 1
+
+
+        
+//         }
+
+//     console.log(whatTheme)
+// }

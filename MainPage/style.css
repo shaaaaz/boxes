@@ -51,7 +51,7 @@ body{
 }
 
 .rec1,.rec2{
-    height: 50vh;
+    height: auto;
     width: 27vw;
 }
 
@@ -60,6 +60,10 @@ label{
     font-size: 2.5vw;
     margin-left: 3vw;
     margin-right: 2vw;
+}
+
+.nickIn{
+    margin-bottom: 5vh;
 }
 
 input{

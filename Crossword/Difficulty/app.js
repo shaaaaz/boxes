@@ -103,10 +103,10 @@ const audio = document.querySelector(".audio-img")
 let soundPage = localStorage.getItem("sound")
 console.log(soundPage)
 
-
 //audio
 
 window.onload = function(){
+    color()
     if(soundPage=="false"){
         console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
@@ -133,3 +133,106 @@ audio.onclick = function(){
         openingAudio.play()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const dmimg = document.querySelector(".dark-mode-img")
+
+// var whatTheme = localStorage.getItem("colorMode")
+// console.log("whatTheme",whatTheme)
+
+// const wide = document.querySelectorAll(".backbox")
+// const wide2 = document.querySelectorAll(".box")
+
+
+// dmimg.onclick = function(){
+
+//     colorSwitch()
+// }
+
+
+// function colorSwitch(){
+
+//     console.log(whatTheme)
+//     if(whatTheme=="1"){
+
+//     document.body.style.backgroundColor = "#BBE8FE"
+
+//     wide.forEach(function(element) {
+//         element.style.backgroundColor = "#386FA4"
+//     });
+
+//     wide2.forEach(function(element) {
+//         element.style.backgroundColor = "#BBE8FE"
+//     });
+
+//     whatTheme = 2
+
+//     localStorage.setItem("colorMode",1)
+//     }
+//     else if(whatTheme=="2"){
+
+//         document.body.style.backgroundColor = "#d6d6d6"
+
+
+//         wide.forEach(function(element) {
+//             element.style.backgroundColor = "#6a6a6a"
+//         });
+
+//         wide2.forEach(function(element) {
+//             element.style.backgroundColor = "#d6d6d6"
+//         });
+    
+//         whatTheme = 1
+
+
+//         localStorage.setItem("colorMode",1)
+//         }
+
+//     console.log(whatTheme)
+// }
+
+// function color(){
+//     console.log(whatTheme)
+//     if(whatTheme=="2"){
+
+//     document.body.style.backgroundColor = "#BBE8FE"
+
+//     wide.forEach(function(element) {
+//         element.style.backgroundColor = "#386FA4"
+//     });
+
+//     wide2.forEach(function(element) {
+//         element.style.backgroundColor = "#BBE8FE"
+//     });
+
+//     // localStorage.setItem("colorMode",2)
+//     }
+//     else if(whatTheme=="1"){
+
+//         document.body.style.backgroundColor = "#d6d6d6"
+
+
+//         wide.forEach(function(element) {
+//             element.style.backgroundColor = "#6a6a6a"
+//         });
+
+//         wide2.forEach(function(element) {
+//             element.style.backgroundColor = "#d6d6d6"
+//         });
+
+
+//         // localStorage.setItem("colorMode",1)
+//         }
+
+// }
