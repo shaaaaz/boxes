@@ -11,7 +11,7 @@ time = parseFloat(time)
 
 const openingAudio = new Audio("../../Audio/MainPage.mp3")
 
-console.log(time)
+// console.log(time)
 
 openingAudio.pause()
 openingAudio.currentTime = time;
@@ -20,11 +20,11 @@ openingAudio.currentTime = time;
 window.onload = function(){
     startTimer()
     if(soundPage=="false"){
-        console.log("HOAJ")
+        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
-        console.log("ck")
+        // console.log("ck")
         openingAudio.currentTime=3
         openingAudio.play()
     }
@@ -320,7 +320,7 @@ function execute(){
     }
 }
 let n = localStorage.getItem("name")
-console.log(n)
+// console.log(n)
 function checkStr(){
     
 }
@@ -339,7 +339,7 @@ let int = null;
 
 
 function startTimer() {
-    console.log("HELLOO")
+    // console.log("HELLOO")
     if (int !== null) {
         clearInterval(int);
     }
@@ -370,7 +370,7 @@ const movesNo = document.querySelector(".movesNo")
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-console.log(soundPage)
+// console.log(soundPage)
 
 
 //audio
