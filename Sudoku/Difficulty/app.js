@@ -11,7 +11,7 @@ const shift = document.querySelector(".box1")
 const b = document.querySelector(".backbox")
 
 function push(){
-    console.log("H")
+    // console.log("H")
     shift.style.backgroundColor = "#00000000"
     shift.style.color = "#00000000"
     shift.style.border = "#000000"
@@ -28,7 +28,7 @@ const shift2 = document.querySelector(".box2")
 const b2 = document.querySelector(".backbox2")
 
 function push2(){
-    console.log("H")
+    // console.log("H")
     shift2.style.backgroundColor = "#00000000"
     shift2.style.color = "#00000000"
     shift2.style.border = "#000000"
@@ -46,7 +46,7 @@ const shift3 = document.querySelector(".box3")
 const b3 = document.querySelector(".backbox3")
 
 function push3(){
-    console.log("H")
+    // console.log("H")
     shift3.style.backgroundColor = "#00000000"
     shift3.style.color = "#00000000"
     shift3.style.border = "#000000"
@@ -64,7 +64,7 @@ time = parseFloat(time)
 
 const openingAudio = new Audio("../../Audio/MainPage.mp3")
 
-console.log(time)
+// console.log(time)
 
 openingAudio.pause()
 openingAudio.currentTime = time;
@@ -83,14 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
 
-        console.log(totalTime)
+        // console.log(totalTime)
     });
 });
 
 window.onload = function(){
     // startTimer()
     if(soundPage=="false"){
-        console.log("HOAJ")
+        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -103,7 +103,7 @@ window.onload = function(){
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-console.log(soundPage)
+// console.log(soundPage)
 
 audio.onclick = function(){
 
