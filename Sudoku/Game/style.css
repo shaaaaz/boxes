@@ -241,6 +241,10 @@ MAIN GAME!!
     margin-bottom: 50px;
 }
 
+.green{
+    animation: colorChange2 0.5s infinite alternate;
+}
+
 @media (max-width: 750px) {
 
     .heading{
@@ -368,5 +372,14 @@ MAIN GAME!!
     }
     to {
         color: hsl(0, 100%, 80%);
+    }
+}
+
+@keyframes colorChange2 {
+    from {
+        color: hsl(116, 100%, 28%);
+    }
+    to {
+        color: hsl(116, 100%, 64%);
     }
 }

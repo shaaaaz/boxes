@@ -134,6 +134,17 @@ body{
     margin-bottom: 10vh;
 }
 
+img{
+    width: 400px;
+    height: 400px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 @media (max-width: 750px) {
 
     .heading{
@@ -178,15 +189,10 @@ body{
         margin-bottom: 3vh;
     }
 
+    img{
+        width: 30vw;
+        height: 30vw;
+    }
+
 }
 
-img{
-    width: 400px;
-    height: 400px;
-}
-
-.flex{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}

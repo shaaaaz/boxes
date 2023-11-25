@@ -105,9 +105,11 @@ input[type="text"]::placeholder {
 
 .startButton{
     display: flex;
-    position: absolute;
-    left: 74%;
-    top: 87%;
+    position: relative;
+    /* left: 74%;
+    top: 87%; */
+    margin-left: 75vw;
+    margin-top: -5vh;
 }
 
 .startRec1{
@@ -148,12 +150,18 @@ input[type="text"]::placeholder {
     margin-bottom: 10vh;
 }
 
+
+
 @media (max-width: 750px) {
     .topArea{
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-top: 0;
+    }
+
+    .nickIn{
+        margin-bottom: 0;
     }
 
     .heading{
@@ -216,9 +224,8 @@ input[type="text"]::placeholder {
     }
 
     .startButton{
-        left: 60%;
-        top: 88%;
-        display: block;
-        position: fixed;
+        margin-left: 59vw;
+        margin-top: 5vw;
+        margin-bottom: 30vw;
     }
 }

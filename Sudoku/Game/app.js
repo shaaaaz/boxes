@@ -836,20 +836,19 @@ const wrongAudio = new Audio("../../Audio/wrongSound.mp3")
 
 
 window.onload = function () {
-
-    // startTimer()
-    if(soundPage=="false"){
-        // console.log("HOAJ")
-        audio.src = "../../Images/No Audio.png"
+    console.log(soundPage)
+    if(soundPage=="true"){
+        openingAudio.currentTime=0
+        openingAudio.play()
     }
     else{
-        openingAudio.currentTime=10
-        openingAudio.play()
+        audio.src = "../../Images/No Audio.png"
+
     }
 
 startTimer()
-    openingAudio.pause()
-    openingAudio.currentTime = time;
+    // openingAudio.pause()
+    openingAudio.currentTime = 10;
 
 
 
@@ -917,6 +916,12 @@ function selectTile() {
 
         if (solution[r][c] == numSelected.id) {
             this.innerText = numSelected.id;
+            this.classList.add("green")
+            setTimeout(() => {
+                this.classList.remove("green");
+                this.style.color = "#000";
+            }, 2000);
+            
             countOfDone++
 
             if(soundPage){
@@ -1038,3 +1043,12 @@ audio.onclick = function(){
     }
 }
 
+// let count =0
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     if(soundPage){
+//     openingAudio.pause()
+//     openingAudio.currentTime = 10
+//     openingAudio.play()
+//     }
+// });
