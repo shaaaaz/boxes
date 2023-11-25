@@ -852,7 +852,6 @@ startTimer()
     openingAudio.currentTime = time;
 
 
-    // generateNum()
 
     for (let i = 1; i <= 9; i++) {
         let number = document.createElement("div");
@@ -866,7 +865,6 @@ startTimer()
         number.addEventListener("click", selectNumber);
     }
 
-    // Board 9x9
     for (let r = 0; r < 9; r++) {
         for (let c = 0; c < 9; c++) {
             let tile = document.createElement("div");
