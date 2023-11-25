@@ -317,6 +317,7 @@ function execute(){
 
     if(percent==100){
         click1()
+        // console.log()
     }
 }
 let n = localStorage.getItem("name")

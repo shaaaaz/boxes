@@ -19,7 +19,7 @@ const shift = document.querySelector(".box1")
 const b = document.querySelector(".backbox")
 
 function push(){
-    console.log("H")
+    // console.log("H")
     shift.style.backgroundColor = "#00000000"
     shift.style.color = "#00000000"
     shift.style.border = "#000000"
@@ -34,7 +34,7 @@ const shift2 = document.querySelector(".box2")
 const b2 = document.querySelector(".backbox2")
 
 function push2(){
-    console.log("H")
+    // console.log("H")
     shift2.style.backgroundColor = "#00000000"
     shift2.style.color = "#00000000"
     shift2.style.border = "#000000"
@@ -50,7 +50,7 @@ const shift3 = document.querySelector(".box3")
 const b3 = document.querySelector(".backbox3")
 
 function push3(){
-    console.log("H")
+    // console.log("H")
     shift3.style.backgroundColor = "#00000000"
     shift3.style.color = "#00000000"
     shift3.style.border = "#000000"
@@ -70,7 +70,7 @@ time = parseFloat(time)
 
 const openingAudio = new Audio("../../Audio/MainPage.mp3")
 
-console.log(time)
+// console.log(time)
 
 openingAudio.pause()
 openingAudio.currentTime = time;
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
 
-        console.log(totalTime)
+        // console.log(totalTime)
     });
 });
 
@@ -101,14 +101,14 @@ document.addEventListener("DOMContentLoaded", () => {
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-console.log(soundPage)
+// console.log(soundPage)
 
 //audio
 
 window.onload = function(){
     color()
     if(soundPage=="false"){
-        console.log("HOAJ")
+        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -146,93 +146,6 @@ audio.onclick = function(){
 
 
 
-// const dmimg = document.querySelector(".dark-mode-img")
 
-// var whatTheme = localStorage.getItem("colorMode")
-// console.log("whatTheme",whatTheme)
-
-// const wide = document.querySelectorAll(".backbox")
-// const wide2 = document.querySelectorAll(".box")
-
-
-// dmimg.onclick = function(){
-
-//     colorSwitch()
-// }
-
-
-// function colorSwitch(){
-
-//     console.log(whatTheme)
-//     if(whatTheme=="1"){
-
-//     document.body.style.backgroundColor = "#BBE8FE"
-
-//     wide.forEach(function(element) {
-//         element.style.backgroundColor = "#386FA4"
-//     });
-
-//     wide2.forEach(function(element) {
-//         element.style.backgroundColor = "#BBE8FE"
-//     });
-
-//     whatTheme = 2
-
-//     localStorage.setItem("colorMode",1)
-//     }
-//     else if(whatTheme=="2"){
-
-//         document.body.style.backgroundColor = "#d6d6d6"
-
-
-//         wide.forEach(function(element) {
-//             element.style.backgroundColor = "#6a6a6a"
-//         });
-
-//         wide2.forEach(function(element) {
-//             element.style.backgroundColor = "#d6d6d6"
-//         });
-    
-//         whatTheme = 1
-
-
-//         localStorage.setItem("colorMode",1)
-//         }
-
-//     console.log(whatTheme)
-// }
-
-// function color(){
-//     console.log(whatTheme)
-//     if(whatTheme=="2"){
-
-//     document.body.style.backgroundColor = "#BBE8FE"
-
-//     wide.forEach(function(element) {
-//         element.style.backgroundColor = "#386FA4"
-//     });
-
-//     wide2.forEach(function(element) {
-//         element.style.backgroundColor = "#BBE8FE"
-//     });
-
-//     // localStorage.setItem("colorMode",2)
-//     }
-//     else if(whatTheme=="1"){
-
-//         document.body.style.backgroundColor = "#d6d6d6"
-
-
-//         wide.forEach(function(element) {
-//             element.style.backgroundColor = "#6a6a6a"
-//         });
-
-//         wide2.forEach(function(element) {
-//             element.style.backgroundColor = "#d6d6d6"
-//         });
-
-
-//         // localStorage.setItem("colorMode",1)
-//         }
 
 // }
