@@ -1,4 +1,4 @@
-console.log("HELLO")
+// console.log("HELLO")
 
 const b = document.querySelector(".startRec2")
 
@@ -13,7 +13,7 @@ function start(){
 
     var isPure = containsNumbers(n)
 
-    console.log(isPure)
+    // console.log(isPure)
 
     var isPureNum = false
 
@@ -29,9 +29,9 @@ function start(){
         alert("Enter a name which doesnt contain numbers!")
         return
       }
-console.log("n=",n,n2)
+// console.log("n=",n,n2)
     if(n=="" || n2==""){
-        console.log("again")
+        // console.log("again")
         alert("Please make sure you have entered your name and nickname to proceed :)");}
 
     else{ 
@@ -110,7 +110,7 @@ function containsNumbers(str) {
   const rec2 = document.querySelector(".rec2")
 
   let v = rec1.offsetHeight
-  console.log("V",v)
+//   console.log("V",v)
 
   rec2.style.height = v + "px"
   rec1.style.height =  v + "px"

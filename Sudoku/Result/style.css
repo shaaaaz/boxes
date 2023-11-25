@@ -138,6 +138,11 @@ body{
     margin-right: 5vw;
 }
 
+
+.resBox{
+    margin-bottom: 10vh;
+}
+
 @media (max-width: 750px) {
 
     .heading{

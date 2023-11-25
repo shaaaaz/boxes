@@ -106,7 +106,7 @@ let soundPage = localStorage.getItem("sound")
 //audio
 
 window.onload = function(){
-    color()
+    // color()
     if(soundPage=="false"){
         // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"

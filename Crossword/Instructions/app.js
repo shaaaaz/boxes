@@ -7,7 +7,7 @@ time = parseFloat(time)
 
 const openingAudio = new Audio("../../Audio/MainPage.mp3")
 
-console.log(time)
+// console.log(time)
 
 openingAudio.pause()
 openingAudio.currentTime = time;
@@ -26,14 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
 
-        console.log(totalTime)
+        // console.log(totalTime)
     });
 });
 
 window.onload = function(){
     // startTimer()
     if(soundPage=="false"){
-        console.log("HOAJ")
+        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -45,7 +45,7 @@ window.onload = function(){
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-console.log(soundPage)
+// console.log(soundPage)
 
 audio.onclick = function(){
 

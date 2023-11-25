@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
 
-        console.log(totalTime)
+        // console.log(totalTime)
     });
 });
 
@@ -149,7 +149,7 @@ function execute(){
     var str =  input1.value
     str =  str.toLowerCase()
     localStorage.setItem("name",str)
-    console.log(str)
+    // console.log(str)
 
     input1.value = ""
 
@@ -290,7 +290,7 @@ function execute(){
     }
     else{
         errors++
-        console.log(errors)
+        // console.log(errors)
         if(soundPage){
             wrongAudio.pause()
             wrongAudio.currentTime = 0
@@ -298,7 +298,7 @@ function execute(){
         }
 
         let errdiv = document.querySelector(".errors")
-        console.log("hi im here")
+        // console.log("hi im here")
         errdiv.classList.add("changee")
             setTimeout(function () {
                 errdiv.classList.toggle("changee")

@@ -11,7 +11,7 @@ time = parseFloat(time)
 
 const openingAudio = new Audio("../../Audio/MainPage.mp3")
 
-console.log(time)
+// console.log(time)
 
 
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
 
-        console.log(totalTime)
+        // console.log(totalTime)
     });
 });
 
@@ -788,7 +788,7 @@ const wrongAudio = new Audio("../../Audio/wrongSound.mp3")
 
     let diff = localStorage.getItem("sudokuDifficulty")
     diff=parseInt(diff)
-    console.log(diff)
+    // console.log(diff)
     if(diff==1)
     {
         var board = boardMatrixEasy[num]
@@ -810,9 +810,9 @@ const wrongAudio = new Audio("../../Audio/wrongSound.mp3")
     localStorage.setItem("board",board)
     localStorage.setItem("solution",solution)
 
-    console.log(num)
-    console.log[board]
-    console.log[solution]
+    // console.log(num)
+    // console.log[board]
+    // console.log[solution]
 
 
 
@@ -839,7 +839,7 @@ window.onload = function () {
 
     // startTimer()
     if(soundPage=="false"){
-        console.log("HOAJ")
+        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -945,7 +945,7 @@ function selectTile() {
 
         }
     }
-    console.log(countOfEmpty)
+    // console.log(countOfEmpty)
 }
 
 const reload = document.querySelector(".newGame")
@@ -994,8 +994,8 @@ function displayTimer() {
 let finalPercent = 0
 
 function calculatePercent(){
-    console.log(countOfDone)
-    console.log(countOfEmpty)
+    // console.log(countOfDone)
+    // console.log(countOfEmpty)
 
     finalPercent = (countOfDone / countOfEmpty)*100
 
@@ -1018,7 +1018,7 @@ function calculatePercent(){
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-console.log(soundPage)
+// console.log(soundPage)
 
 audio.onclick = function(){
 

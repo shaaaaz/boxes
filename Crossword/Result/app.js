@@ -24,7 +24,7 @@ function click1(){
 
 var theme = localStorage.getItem("ThemeChoosen")
 
-console.log(theme)
+// console.log(theme)
 
 var percent = 0
 var errors = 0
@@ -81,7 +81,7 @@ openingAudio.currentTime = 1;
 window.onload = function(){
     // startTimer()
     if(soundPage=="false"){
-        console.log("HOAJ")
+        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -94,7 +94,7 @@ window.onload = function(){
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-console.log(soundPage)
+// console.log(soundPage)
 
 audio.onclick = function(){
 

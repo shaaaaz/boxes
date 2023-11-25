@@ -11,7 +11,7 @@ time = parseFloat(time)
 
 const openingAudio = new Audio("../../Audio/MainPage.mp3")
 
-console.log(time)
+// console.log(time)
 
 openingAudio.pause()
 openingAudio.currentTime = time;
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
 
-        console.log(totalTime)
+        // console.log(totalTime)
     });
 });
 
@@ -139,7 +139,7 @@ function execute(){
     var str =  input1.value
     str =  str.toLowerCase()
     localStorage.setItem("name",str)
-    console.log(str)
+    // console.log(str)
 
     input1.value = ""
 
@@ -275,14 +275,14 @@ function execute(){
     }
     else{
         errors++
-        console.log(errors)
+        // console.log(errors)
         if(soundPage){
             wrongAudio.pause()
             wrongAudio.currentTime = 0
             wrongAudio.play()
         }
         let errdiv = document.querySelector(".errors")
-        console.log("hi im here")
+        // console.log("hi im here")
         errdiv.classList.add("changee")
             setTimeout(function () {
                 errdiv.classList.toggle("changee")
@@ -311,7 +311,7 @@ document.addEventListener("keyup", function(event) {
 window.onload = function(){
     startTimer()
     if(soundPage=="false"){
-        console.log("HOAJ")
+        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -325,7 +325,7 @@ let int = null;
 
 
 function startTimer() {
-    console.log("HELLOO")
+    // console.log("HELLOO")
     if (int !== null) {
         clearInterval(int);
     }
@@ -360,7 +360,7 @@ const movesNo = document.querySelector(".movesNo")
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-console.log(soundPage)
+// console.log(soundPage)
 
 audio.onclick = function(){
 
