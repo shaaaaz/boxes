@@ -145,7 +145,7 @@ input[type="text"]::placeholder {
 }
 
 .nickIn{
-    margin-bottom: 6vh;
+    margin-bottom: 10vh;
 }
 
 @media (max-width: 750px) {
