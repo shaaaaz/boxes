@@ -208,3 +208,20 @@ Some of the features I have included in this website are
 ![Alt text](Screenshots/sc12.png) 
 ![Alt text](Screenshots/sc13.png)
 ![Alt text](Screenshots/sc14.png)
+
+## BIBLIOGRAPHY
+
+- Icons - (https://www.flaticon.com/) 
+- Icons - (https://www.shutterstock.com/)
+- Technical Help - W3 Schools (https://www.w3schools.com/) 
+- Technical Help - Stack Overflow (https://stackoverflow.com/) 
+- Technical Help - MDN Web Resources (https://developer.mozilla.org/en-US/)
+- Theme and colours- Coloors (https://coolors.co/)
+- Design - Figma (https://www.figma.com/)
+- Suokdus - KrazyDad Sudoku (https://krazydad.com/sudoku/)
+- Slides - Google Slides (https://www.google.com/slides/about/)
+- Movies Crossword - BuzzFeed (https://www.buzzfeed.com/in)
+- Sports Crossword - Britanica (https://www.britannica.com/)
+
+
+   
