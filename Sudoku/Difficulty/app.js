@@ -1,3 +1,5 @@
+// redirect to the next page
+
 function goback(){
     window.location.href = "../../ChooseCorS/index.html";
 }
@@ -6,12 +8,17 @@ function instructions(){
     window.location.href = "../Instructions/index.html";
 }
 
+
+
+
+
+// create animation like efffect when button is clciked redirect to tthe desired level page
+
 const shift = document.querySelector(".box1")
 
 const b = document.querySelector(".backbox")
 
 function push(){
-    // console.log("H")
     shift.style.backgroundColor = "#00000000"
     shift.style.color = "#00000000"
     shift.style.border = "#000000"
@@ -28,7 +35,6 @@ const shift2 = document.querySelector(".box2")
 const b2 = document.querySelector(".backbox2")
 
 function push2(){
-    // console.log("H")
     shift2.style.backgroundColor = "#00000000"
     shift2.style.color = "#00000000"
     shift2.style.border = "#000000"
@@ -46,7 +52,6 @@ const shift3 = document.querySelector(".box3")
 const b3 = document.querySelector(".backbox3")
 
 function push3(){
-    // console.log("H")
     shift3.style.backgroundColor = "#00000000"
     shift3.style.color = "#00000000"
     shift3.style.border = "#000000"
@@ -59,16 +64,23 @@ function push3(){
     window.location.href = "../Game/index.html"
 }
 
+
+
+
+
+
+
+
+// calculate time spent on this page and play audio
+
 var time = window.localStorage.getItem('timeSpent');
 time = parseFloat(time)
 
 const openingAudio = new Audio("../../Audio/MainPage.mp3")
 
-// console.log(time)
 
 openingAudio.pause()
 openingAudio.currentTime = time;
-// openingAudio.play()
 
 document.addEventListener("DOMContentLoaded", () => {
     const start = new Date().getTime();
@@ -83,14 +95,11 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
 
-        // console.log(totalTime)
     });
 });
 
 window.onload = function(){
-    // startTimer()
     if(soundPage=="false"){
-        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -100,10 +109,14 @@ window.onload = function(){
 }
 
 
+
+
+
+// functionality of the audio mute and playbuttons
+
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-// console.log(soundPage)
 
 audio.onclick = function(){
 

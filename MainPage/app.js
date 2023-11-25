@@ -1,4 +1,8 @@
-// console.log("HELLO")
+//get the value of name entered and chech if it is a number
+
+// if the value enetered is a number there will be an alert box
+
+// both input boxes should have a proper input type and a value in the,
 
 const b = document.querySelector(".startRec2")
 
@@ -47,11 +51,8 @@ function start(){
     localStorage.setItem("nickName",n2) 
     
         window.location.href = "./ChooseCorS/index.html";}
-    // }
-    // else{
-    //     console.log("again")
-    //     alert("Please make sure you have entered your name and nickname to proceed :)");
-    // }
+        //  alert("Please make sure you have entered your name and nickname to proceed :)");
+    
 
 }
 
@@ -77,10 +78,7 @@ time = 0
 
 
 
-// window.onload = function(){
-    
-
-// }
+// caluculate time spent and audio functionality
 
 document.addEventListener("DOMContentLoaded", () => {
     const start = new Date().getTime();
@@ -101,16 +99,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 localStorage.setItem('sound', true);
 
+// input1 (name) shouldnt contain any numbers in them
+
 function containsNumbers(str) {
     return /\d/.test(str);
   }
 
 
+  // set the height of the rectangle
+
   const rec1 = document.querySelector(".rec1")
   const rec2 = document.querySelector(".rec2")
 
   let v = rec1.offsetHeight
-//   console.log("V",v)
 
   rec2.style.height = v + "px"
   rec1.style.height =  v + "px"

@@ -1,3 +1,5 @@
+//redirect to next and back
+
 function goback(){
     window.location.href = "../Difficulty/index.html";
 }
@@ -6,25 +8,25 @@ function instructions(){
     window.location.href = "../Instructions/index.html";
 }
 
+
+
+
+// calculate time spent on the page and play audio if audio is on
+
 var time = window.localStorage.getItem('timeSpent');
 time = parseFloat(time)
 
 const openingAudio = new Audio("../../Audio/MainPage.mp3")
 
-// console.log(time)
-
 openingAudio.pause()
 openingAudio.currentTime = time;
-// openingAudio.play()
 
 window.onload = function(){
     startTimer()
     if(soundPage=="false"){
-        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
-        // console.log("ck")
         openingAudio.currentTime=3
         openingAudio.play()
     }
@@ -42,10 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
-
-        // console.log(totalTime)
     });
 });
+
+// add animation like effect to the buttons
 
 const e1 = document.querySelector(".exit1")
 const e2 = document.querySelector(".exit2")
@@ -66,6 +68,20 @@ function click1(){
     pa2.style.backgroundColor = "#cacaca"
     window.location.href = "../Result/index.html";
 }
+
+
+
+
+
+
+
+
+
+// assigning variables to the various boxes
+
+// each box has a different id
+
+
 
 
 const brad1 = document.querySelector(".brad1")
@@ -136,6 +152,11 @@ const race4 = document.querySelector(".race4");
 
 
 
+// when check buton is clicked it will take the input from input box and check 
+// if it matches the answer 
+
+
+
 const input1 = document.querySelector(".inputValue")
 
 const check1 = document.querySelector(".check1")
@@ -145,11 +166,12 @@ check1.onclick = function(){
 execute()
 }
 
+// if the value entered in the input box is correct then the value will be updated in the main grid/boxes
+
 function execute(){
     var str =  input1.value
     str =  str.toLowerCase()
     localStorage.setItem("name",str)
-    // console.log(str)
 
     input1.value = ""
 
@@ -288,9 +310,10 @@ function execute(){
             correctAudio.play()
         }
     }
+
+// soound effect if it is correct or wrong
+
     else{
-        errors++
-        // console.log(errors)
         if(soundPage){
             wrongAudio.pause()
             wrongAudio.currentTime = 0
@@ -298,7 +321,7 @@ function execute(){
         }
 
         let errdiv = document.querySelector(".errors")
-        // console.log("hi im here")
+        errors++
         errdiv.classList.add("changee")
             setTimeout(function () {
                 errdiv.classList.toggle("changee")
@@ -309,6 +332,9 @@ function execute(){
     moves++
     errNo.innerHTML = errors
     movesNo.innerHTML = moves
+
+    // store moves taken in local storage and update it every time
+
     localStorage.setItem("percentCW1",percent)
     localStorage.setItem("errorsCW1",errors)
     localStorage.setItem("minsCW1",minutes)
@@ -317,16 +343,13 @@ function execute(){
 
     if(percent==100){
         click1()
-        // console.log()
     }
 }
 let n = localStorage.getItem("name")
-// console.log(n)
-function checkStr(){
-    
-}
 
 
+
+// when enter is click it should do the same functionality as the check button
 
     document.addEventListener("keyup", function(event) {
         if (event.code === 'Enter') {
@@ -347,6 +370,9 @@ function startTimer() {
     int = setInterval(displayTimer, 1000);
 }
 
+// there should be a timer on the screen which displays how much time has passed since you 
+// have started the crossword
+
 function displayTimer() {
     seconds++;
     if (seconds == 60) {
@@ -360,12 +386,21 @@ function displayTimer() {
     timeRef.innerHTML = `${m} : ${s}`;
 }
 
+
+// print erros moves and percent in html page
+
 let errors = 0
 let moves = 0
 let percent = 0
 const errNo =  document.querySelector(".errNo")
 const movesNo = document.querySelector(".movesNo")
 
+
+
+
+
+
+// play audio when audio is on
 
 
 const audio = document.querySelector(".audio-img")
@@ -403,6 +438,8 @@ localStorage.setItem("errorsCW1",errors)
 localStorage.setItem("minsCW1",minutes)
 localStorage.setItem("secondsCW1",seconds)
 localStorage.setItem("movesCW1",moves)
+
+// audios for worng and right guess
 
 const correctAudio = new Audio("../../Audio/correctSound.mp3")
 const wrongAudio = new Audio("../../Audio/wrongSound.mp3")

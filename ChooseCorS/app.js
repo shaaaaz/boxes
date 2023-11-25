@@ -1,17 +1,16 @@
+//redirect to the next and previous page
+
 function crossword(){
-    // localStorage.setItem("colorMode",whatTheme)
     window.location.href = "../Crossword/Difficulty/index.html" ;
 }
 
 function sudoku(){
-    // localStorage.setItem("colorMode",whatTheme)
     window.location.href = "../Sudoku/Difficulty/index.html" ;
 }
 
 let n = localStorage.getItem("nickName")
 
 function goback(){
-    // localStorage.setItem("colorMode",whatTheme)
     window.location.href = "../index.html";
 }
 
@@ -21,15 +20,12 @@ function goback(){
 
 
 
-
+//calculatte time spent on each page and playing the audio if sound button is on unmute
 
 var time = window.localStorage.getItem('timeSpent');
 time = parseFloat(time)
 
 const openingAudio = new Audio("../Audio/MainPage.mp3")
-
-
-
 
 openingAudio.pause()
 openingAudio.currentTime = time;
@@ -38,9 +34,7 @@ openingAudio.loop = true
 let soundOfChoose = localStorage.getItem("sound")
 
 window.onload = function(){
-    // colorSwitch()
     if(soundPage=="false"){
-        // console.log("HOAJ")
         audio.src = "../Images/No Audio.png"
     }
     else{
@@ -63,8 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
-
-        // console.log(totalTime)
     });
 });
 
@@ -73,10 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-// console.log(soundPage)
 
 
-//audio
+//audio mute button functionality
 
 
 audio.onclick = function(){

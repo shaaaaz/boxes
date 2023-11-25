@@ -1,3 +1,5 @@
+// redirect to the next page and previous page
+
 function goback(){
     window.location.href = "../Difficulty/index.html";
 }
@@ -7,11 +9,12 @@ time = parseFloat(time)
 
 const openingAudio = new Audio("../../Audio/MainPage.mp3")
 
-// console.log(time)
+
+
+// play audio when page is loaded and calulate time spent on the page
 
 openingAudio.pause()
 openingAudio.currentTime = time;
-// openingAudio.play()
 
 document.addEventListener("DOMContentLoaded", () => {
     const start = new Date().getTime();
@@ -25,15 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
-
-        // console.log(totalTime)
     });
 });
 
 window.onload = function(){
-    // startTimer()
     if(soundPage=="false"){
-        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -45,7 +44,12 @@ window.onload = function(){
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-// console.log(soundPage)
+
+
+
+
+
+// mute the audio when audio mute button is clicked and vice versa
 
 audio.onclick = function(){
 

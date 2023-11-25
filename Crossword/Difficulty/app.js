@@ -1,11 +1,4 @@
-function crossword(){
-    window.location.href = "" ;
-}
-
-function sudoku(){
-    window.location.href = "";
-}
-
+// redirect to choose page
 
 function goback(){
     window.location.href = "../../ChooseCorS/index.html";
@@ -14,12 +7,16 @@ function goback(){
 function instructions(){
     window.location.href = "../Instructions/index.html";
 }
+
+// onclick the buttons should have an effect that they are pushed 
+
 const shift = document.querySelector(".box1")
 
 const b = document.querySelector(".backbox")
 
+// button 1 animation and redirection
+
 function push(){
-    // console.log("H")
     shift.style.backgroundColor = "#00000000"
     shift.style.color = "#00000000"
     shift.style.border = "#000000"
@@ -29,6 +26,8 @@ function push(){
     localStorage.setItem("ThemeChoosen",1)
     window.location.href = "../GameMovies/index.html"
 }
+
+// button 2 animation and redirection
 
 const shift2 = document.querySelector(".box2")
 const b2 = document.querySelector(".backbox2")
@@ -44,6 +43,9 @@ function push2(){
     localStorage.setItem("ThemeChoosen",2)
     window.location.href = "../GamePlaces/index.html"
 }
+
+// button 3 animation and redirection
+
 
 
 const shift3 = document.querySelector(".box3")
@@ -63,7 +65,7 @@ function push3(){
 
 
 
- 
+//  calculate time spent of the page and play Audio on load
 
 var time = window.localStorage.getItem('timeSpent');
 time = parseFloat(time)
@@ -88,27 +90,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
-
-        // console.log(totalTime)
     });
 });
 
 
 
-//audio
 
 
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-// console.log(soundPage)
-
-//audio
 
 window.onload = function(){
-    // color()
     if(soundPage=="false"){
-        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -116,6 +110,8 @@ window.onload = function(){
         openingAudio.play()
     }
 }
+
+// mute the audio on button click
 
 audio.onclick = function(){
     if(soundPage)

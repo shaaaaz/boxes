@@ -1,3 +1,5 @@
+// add special animaton like effect on butttons and redirect to the desired page
+
 const e1 = document.querySelector(".exit1")
 const e2 = document.querySelector(".exit2")
 
@@ -24,7 +26,7 @@ function click1(){
 
 var theme = localStorage.getItem("ThemeChoosen")
 
-// console.log(theme)
+// get the local storage values from the previous page to display them here
 
 var percent = 0
 var errors = 0
@@ -73,15 +75,13 @@ else{
 
 const openingAudio = new Audio("../../Audio/Gonna Fly Now.mp3")
 
-
+// play audio when windows is loaded
 
 openingAudio.pause()
 openingAudio.currentTime = 1;
 
 window.onload = function(){
-    // startTimer()
     if(soundPage=="false"){
-        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -91,10 +91,11 @@ window.onload = function(){
 }
 
 
+// audio button functionality
+
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-// console.log(soundPage)
 
 audio.onclick = function(){
 
@@ -120,12 +121,7 @@ audio.onclick = function(){
 
 
 
-// console.log(percent,errors,mins,seconds,moves)
-
-// let percent =99
-// let mins = 4
-// let seconds =56
-// let errors = 56
+// diffrent statement will be dispalyed according to the percent scored by the user
 
 pDisplay = document.querySelector(".perc")
 
@@ -147,6 +143,8 @@ else if(percent<90){
 else{
     pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the crossword right.That was just SPECTACULAR! A great victory over crosswords!!!`
 }
+
+// display these scores to the html page
 
 const t = document.querySelector(".time")
 

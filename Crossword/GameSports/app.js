@@ -1,3 +1,5 @@
+// redirect to the next or previous page 
+
 function goback(){
     window.location.href = "../Difficulty/index.html";
 }
@@ -6,16 +8,21 @@ function instructions(){
     window.location.href = "../Instructions/index.html";
 }
 
+
+
+
+
+
+// calculate time spent on the page and play audio
+
 var time = window.localStorage.getItem('timeSpent');
 time = parseFloat(time)
 
 const openingAudio = new Audio("../../Audio/MainPage.mp3")
 
-// console.log(time)
-
 openingAudio.pause()
 openingAudio.currentTime = time;
-openingAudio.play()
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const start = new Date().getTime();
@@ -29,10 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
-
-        // console.log(totalTime)
     });
 });
+
+
+
+
+
+// create an animation like effectt on the buttons
 
 const e1 = document.querySelector(".exit1")
 const e2 = document.querySelector(".exit2")
@@ -54,6 +65,12 @@ function click1(){
     window.location.href = "../Result/index.html";
 }
 
+
+
+
+
+
+// create various variables for eac and every element
 
 const nadal1 = document.querySelector(".nadal1");
 const nadal2 = document.querySelector(".nadal2");
@@ -229,15 +246,14 @@ function execute(){
         }
     }
     else{
+        // play audio calculate and display errors when user is wrong
         errors++
-        // console.log(errors)
         if(soundPage){
             wrongAudio.pause()
             wrongAudio.currentTime = 0
             wrongAudio.play()
         }
         let errdiv = document.querySelector(".errors")
-        // console.log("hi im here")
         errdiv.classList.add("changee")
             setTimeout(function () {
                 errdiv.classList.toggle("changee")
@@ -246,6 +262,8 @@ function execute(){
     moves++
     errNo.innerHTML = errors
     movesNo.innerHTML = moves
+
+    // store th various values that have to be extracettd in the next page
     localStorage.setItem("percentCW3",percent)
     localStorage.setItem("errorsCW3",errors)
     localStorage.setItem("minsCW3",minutes)
@@ -258,10 +276,9 @@ function execute(){
     }
 }
 let n = localStorage.getItem("name")
-// console.log(n)
-function checkStr(){
-    
-}
+
+
+// do the same function even when enter is clciked
 
 document.addEventListener("keyup", function(event) {
     if (event.code === 'Enter') {
@@ -269,10 +286,12 @@ document.addEventListener("keyup", function(event) {
     }
 });
 
+
+// play audio on windows load
+
 window.onload = function(){
     startTimer()
     if(soundPage=="false"){
-        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -286,8 +305,10 @@ let timeRef = document.querySelector(".timer");
 let int = null;
 
 
+
+// timer for th eoage which calculates secodns and mins
+
 function startTimer() {
-    // console.log("HELLOO")
     if (int !== null) {
         clearInterval(int);
     }
@@ -307,6 +328,9 @@ function displayTimer() {
     timeRef.innerHTML = `${m} : ${s}`;
 }
 
+
+
+
 let errors = 0
 let moves = 0
 let percent = 0
@@ -322,7 +346,7 @@ let soundPage = localStorage.getItem("sound")
 audio.onclick = function(){
 
     
-
+// play the audio if the audio button is on
     if(soundPage)
     {
         audio.src = "../../Images/No Audio.png"
@@ -345,6 +369,9 @@ localStorage.setItem("percentCW3",percent)
     localStorage.setItem("minsCW3",minutes)
     localStorage.setItem("secondsCW3",seconds)
     localStorage.setItem("movesCW3",moves)
+
+
+    // get the audio effects for wrong and right guesses 
 
     const correctAudio = new Audio("../../Audio/correctSound.mp3")
 const wrongAudio = new Audio("../../Audio/wrongSound.mp3")

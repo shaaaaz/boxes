@@ -1,3 +1,5 @@
+// create an animation like ffect when the button is clicked
+
 const e1 = document.querySelector(".exit1")
 const e2 = document.querySelector(".exit2")
 
@@ -18,6 +20,9 @@ function click1(){
     window.location.href = "../Difficulty/index.html";
 }
 
+
+// load the audio file
+
 const openingAudio = new Audio("../../Audio/Gonna Fly Now.mp3")
 
 time = 0
@@ -31,7 +36,7 @@ window.onload = function(){
 }
 
 
-
+// get the values from previous page using local storage
 
 
 let percent = localStorage.getItem("percent")
@@ -39,12 +44,7 @@ let errors = localStorage.getItem("errors")
 let mins = localStorage.getItem("mins")
 let seconds = localStorage.getItem("seconds")
 
-// console.log(percent,errors,mins,seconds)
-
-// let percent =99
-// let mins = 4
-// let seconds =56
-// let errors = 56
+// diffrent statements that will be dispaleyd according to the score that user has got
 
 pDisplay = document.querySelector(".perc")
 
@@ -67,6 +67,9 @@ else{
     pDisplay.innerHTML = `You have got <span class="red">${percent}</span> percent of the sudoku right.That was just SPECTACULAR! A great victory over number!!!`
 }
 
+
+// display these scores on the hml page
+
 const t = document.querySelector(".time")
 
 t.innerHTML = `Time taken for you to solve the puzzle is <span class="red">${mins}</span> minutes and <span class="red">${seconds}</span> seconds.</span>`
@@ -75,10 +78,12 @@ const err = document.querySelector(".error")
 
 err.innerHTML = `No of errors commited are - <span class="red">${errors}</span>`
 
+
+
+// play audio when windows is loaded
+
 window.onload = function(){
-    // startTimer()
     if(soundPage=="false"){
-        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -91,7 +96,11 @@ window.onload = function(){
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-// console.log(soundPage)
+
+
+
+
+// functionaliy of the audio on off button
 
 audio.onclick = function(){
 

@@ -1,3 +1,5 @@
+// redirect to the next and previous page on click
+
 function goback(){
     window.location.href = "../Difficulty/index.html";
 }
@@ -6,12 +8,14 @@ function instructions(){
     window.location.href = "../Instructions/index.html";
 }
 
+
+
+//  calculate time spent on the page and play audio accordingly
+
 var time = window.localStorage.getItem('timeSpent');
 time = parseFloat(time)
 
 const openingAudio = new Audio("../../Audio/MainPage.mp3")
-
-// console.log(time)
 
 openingAudio.pause()
 openingAudio.currentTime = time;
@@ -29,10 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
-
-        // console.log(totalTime)
     });
 });
+
+// animation effect on buttons
 
 const e1 = document.querySelector(".exit1")
 const e2 = document.querySelector(".exit2")
@@ -57,7 +61,7 @@ function click1(){
 
 
 
-
+// creatte and assign variables for each and every block/cell in the html file
 
 const input1 = document.querySelector(".inputValue")
 
@@ -131,6 +135,12 @@ const california9 = document.querySelector(".california9");
 const california10 = document.querySelector(".california10");
 
 
+
+
+
+
+// when input from the user in the input box is correc it should update the html accordinglt
+
 check1.onclick = function(){
 execute()
 }
@@ -139,7 +149,6 @@ function execute(){
     var str =  input1.value
     str =  str.toLowerCase()
     localStorage.setItem("name",str)
-    // console.log(str)
 
     input1.value = ""
 
@@ -275,14 +284,15 @@ function execute(){
     }
     else{
         errors++
-        // console.log(errors)
         if(soundPage){
             wrongAudio.pause()
             wrongAudio.currentTime = 0
             wrongAudio.play()
         }
         let errdiv = document.querySelector(".errors")
-        // console.log("hi im here")
+
+        // errros should have a effect for 2 second when answer is wrong
+
         errdiv.classList.add("changee")
             setTimeout(function () {
                 errdiv.classList.toggle("changee")
@@ -291,6 +301,9 @@ function execute(){
     moves++
     errNo.innerHTML = errors
     movesNo.innerHTML = moves
+
+    // store the data on every click to localstorage
+
     localStorage.setItem("percentCW2",percent)
     localStorage.setItem("errorsCW2",errors)
     localStorage.setItem("minsCW2",minutes)
@@ -301,6 +314,8 @@ function execute(){
         click1()
     }
 }
+
+// when enter is clicked it should do the same function that occurs when check is clicked
 
 document.addEventListener("keyup", function(event) {
     if (event.code === 'Enter') {
@@ -323,9 +338,10 @@ let [minutes, seconds] = [0, 0]
 let timeRef = document.querySelector(".timer");
 let int = null;
 
+// timer should be updated every second and count these seconds
+
 
 function startTimer() {
-    // console.log("HELLOO")
     if (int !== null) {
         clearInterval(int);
     }
@@ -345,6 +361,8 @@ function displayTimer() {
     timeRef.innerHTML = `${m} : ${s}`;
 }
 
+// show erros and other things in the html page
+
 let errors = 0
 let moves = 0
 let percent = 0
@@ -360,7 +378,8 @@ const movesNo = document.querySelector(".movesNo")
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-// console.log(soundPage)
+
+// play Audio when windows is loaded
 
 audio.onclick = function(){
 
@@ -382,11 +401,15 @@ audio.onclick = function(){
     }
 }
 
+// local storage
+
 localStorage.setItem("percentCW2",percent)
     localStorage.setItem("errorsCW2",errors)
     localStorage.setItem("minsCW2",minutes)
     localStorage.setItem("secondsCW2",seconds)
     localStorage.setItem("movesCW2",moves)
+
+// audios for wrong and right guesses
 
     const correctAudio = new Audio("../../Audio/correctSound.mp3")
 const wrongAudio = new Audio("../../Audio/wrongSound.mp3")
