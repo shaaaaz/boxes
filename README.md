@@ -194,4 +194,16 @@ Some of the features I have included in this website are
 
 ## SCREENSHOTS
 
-![Alt text](<Screenshot 2023-11-25 6.58.53 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.58.48 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.58.38 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.58.31 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.58.24 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.57.37 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.57.28 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.57.17 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.57.06 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.56.27 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.56.00 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.55.53 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.55.42 PM.png>) ![Alt text](<Screenshot 2023-11-25 6.55.29 PM.png>)
+![Alt text](Screenshots/sc1.png) 
+![Alt text](Screenshots/sc2.png) 
+![Alt text](Screenshots/sc3.png) 
+![Alt text](Screenshots/sc4.png) 
+![Alt text](Screenshots/sc5.png) 
+![Alt text](Screenshots/sc6.png) 
+![Alt text](Screenshots/sc7.png) 
+![Alt text](Screenshots/sc8.png) 
+![Alt text](Screenshots/sc9.png) 
+![Alt text](Screenshots/sc10.png) 
+![Alt text](Screenshots/sc11.png) 
+![Alt text](Screenshots/sc12.png) 
+![Alt text](Screenshots/sc13.png)
