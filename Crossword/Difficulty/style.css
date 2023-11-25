@@ -53,7 +53,7 @@ body{
     background-color: transparent;
     position: absolute;
     top: 4%;
-    right: 7%;
+    right: 7.5%;
     margin-top: 2.5px;
 }
 
@@ -111,7 +111,7 @@ body{
     background-color: transparent;
     position: absolute;
     top: 4%;
-    right: 11.5%;
+    right: 3%;
     margin-top: 5px;
 }
 
@@ -124,15 +124,15 @@ body{
         font-size: 14vw;
     }
 
-    .inst{
+    /* .inst{
         top: 14%;
         right: 2.5%;
-    }
+    } */
 
-    .audio-img{
-        top: 24%;
+    /* .audio-img{
+        top: 3%;
         right: 2.7%;
-    }
+    } */
 
     .title{
         width: 68vw;
@@ -158,15 +158,15 @@ body{
         font-size: 14vw;
     }
 
-    .inst{
-        top: 14%;
-        right: 2.5%;
-    }
+    /* .inst{
+        right:  11vw;
+        margin-top: 0;
+    } */
 
-    .audio-img{
-        top: 24%;
-        right: 2.7%;
-    }
+    /* .audio-img{
+        right: 3vw;
+        margin-top: 0;
+    } */
 
     .title{
         width: 68vw;
@@ -192,5 +192,18 @@ body{
 
     .hover{
         margin-bottom: 5vh;
+    }
+    .inst{
+        right:  11vw;
+        margin-top: 0;
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .audio-img{
+        right: 3vw;
+        margin-top: 0;
+        width: 6vw;
+        height: 6vw;
     }
 }

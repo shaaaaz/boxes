@@ -104,3 +104,13 @@ localStorage.setItem('sound', true);
 function containsNumbers(str) {
     return /\d/.test(str);
   }
+
+
+  const rec1 = document.querySelector(".rec1")
+  const rec2 = document.querySelector(".rec2")
+
+  let v = rec1.offsetHeight
+  console.log("V",v)
+
+  rec2.style.height = v + "px"
+  rec1.style.height =  v + "px"

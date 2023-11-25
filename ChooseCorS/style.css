@@ -86,7 +86,7 @@ body{
     background-color: transparent;
     position: absolute;
     top: 4%;
-    right: 7%;
+    right: 3%;
     margin-top: 5px;
 }
 
@@ -103,10 +103,7 @@ body{
         font-size: 8vw;
     }
 
-    .audio-img{
-        right: 2.5%;
-        top: 14%;
-    }
+
 
     .parts{
         flex-direction: column;
@@ -139,5 +136,19 @@ body{
         justify-content: center;
         height: 57vw;
         border-left: 6px solid rgb(0, 0, 0);
+    }
+
+    .inst{
+        right:  11vw;
+        margin-top: 0;
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .audio-img{
+        right: 3vw;
+        margin-top: 0;
+        width: 6vw;
+        height: 6vw;
     }
 }

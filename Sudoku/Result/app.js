@@ -39,7 +39,7 @@ let errors = localStorage.getItem("errors")
 let mins = localStorage.getItem("mins")
 let seconds = localStorage.getItem("seconds")
 
-console.log(percent,errors,mins,seconds)
+// console.log(percent,errors,mins,seconds)
 
 // let percent =99
 // let mins = 4
@@ -78,7 +78,7 @@ err.innerHTML = `No of errors commited are - <span class="red">${errors}</span>`
 window.onload = function(){
     // startTimer()
     if(soundPage=="false"){
-        console.log("HOAJ")
+        // console.log("HOAJ")
         audio.src = "../../Images/No Audio.png"
     }
     else{
@@ -91,7 +91,7 @@ window.onload = function(){
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-console.log(soundPage)
+// console.log(soundPage)
 
 audio.onclick = function(){
 

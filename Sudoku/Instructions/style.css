@@ -124,7 +124,7 @@ body{
     background-color: transparent;
     position: absolute;
     top: 4%;
-    right: 7%;
+    right: 3%;
     margin-top: 5px;
 }
 
@@ -148,9 +148,18 @@ body{
 
     
 
+    .inst{
+        right:  11vw;
+        margin-top: 0;
+        width: 6vw;
+        height: 6vw;
+    }
+
     .audio-img{
-        top: 13%;
-        right: 2.7%;
+        right: 3vw;
+        margin-top: 0;
+        width: 6vw;
+        height: 6vw;
     }
 
     .rulebox{

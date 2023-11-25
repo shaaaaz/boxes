@@ -50,7 +50,7 @@ body{
     background-color: transparent;
     position: absolute;
     top: 4%;
-    right: 7%;
+    right: 7.5%;
     margin-top: 2.5px;
 }
 
@@ -66,7 +66,7 @@ body{
     background-color: transparent;
     position: absolute;
     top: 4%;
-    right: 11.5%;
+    right: 3%;
     margin-top: 5px;
 }
 
@@ -468,32 +468,13 @@ body{
         font-size: 14vw;
     }
 
-    .inst{
-        /* top: 14%; */
-        /* right: 2.5%; */
-        top: 1%;
-    }
+    
 
-    .audio-img{
-        /* top: 24%; */
-        /* right: 2.7%; */
-    }
-
-    .dark-mode-img,.audio-img,.audio-img,.inst{
+    /* .dark-mode-img,.audio-img,.audio-img,.inst{
         width: 6vw;
         height: 6vw;
         top: 1%;
-    }
-
-    .inst{
-        right:  10vw;
-        margin-top: 0;
-    }
-
-    .audio-img{
-        right: 18vw;
-        margin-top: 0;
-    }
+    } */
 
     .inputValue,.check1,.check2,.exit1,.exit2,.again1,.again2{
         height: 8vw;
@@ -504,6 +485,19 @@ body{
     .buttons{
         margin-top: -2.5vw;
         margin-bottom: -2.5w;
+    }
+    .inst{
+        right:  11vw;
+        margin-top: 0;
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .audio-img{
+        right: 3vw;
+        margin-top: 0;
+        width: 6vw;
+        height: 6vw;
     }
   }
 

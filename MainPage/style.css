@@ -50,8 +50,12 @@ body{
     margin-top: 2vh;
 }
 
-.rec1,.rec2{
+.rec1{
     height: auto;
+    width: 27vw;
+}
+
+.rec2{
     width: 27vw;
 }
 
@@ -138,6 +142,10 @@ input[type="text"]::placeholder {
 
 .startButton:active::after{
     margin: 100px;
+}
+
+.nickIn{
+    margin-bottom: 6vh;
 }
 
 @media (max-width: 750px) {
