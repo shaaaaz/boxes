@@ -40,7 +40,7 @@ let soundOfChoose = localStorage.getItem("sound")
 window.onload = function(){
     // colorSwitch()
     if(soundPage=="false"){
-        console.log("HOAJ")
+        // console.log("HOAJ")
         audio.src = "../Images/No Audio.png"
     }
     else{
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem('timeSpent')
         localStorage.setItem('timeSpent', totalTime);
 
-        console.log(totalTime)
+        // console.log(totalTime)
     });
 });
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const audio = document.querySelector(".audio-img")
 
 let soundPage = localStorage.getItem("sound")
-console.log(soundPage)
+// console.log(soundPage)
 
 
 //audio
@@ -101,50 +101,3 @@ audio.onclick = function(){
 
 const h = document.querySelector(".heading")
 
-// const dmimg = document.querySelector(".dark-mode-img")
-
-// // var whatTheme = localStorage.getItem("colorMode")
-//  var whatTheme = 2
-
-
-
-// const wide = document.querySelectorAll(".wide")
-
-// dmimg.onclick = function(){
-
-//     colorSwitch()
-// }
-
-
-// function colorSwitch(){
-
-//     console.log(whatTheme)
-//     if(whatTheme=="1"){
-
-//     document.body.style.backgroundColor = "#BBE8FE"
-
-//     wide.forEach(function(element) {
-//         element.style.backgroundColor = "#BBE8FE"
-//     });
-
-//     whatTheme = 2
-
-    
-//     }
-//     else if(whatTheme=="2"){
-
-//         document.body.style.backgroundColor = "#d6d6d6"
-
-
-//         wide.forEach(function(element) {
-//             element.style.backgroundColor = "#d6d6d6"
-//         });
-    
-//         whatTheme = 1
-
-
-        
-//         }
-
-//     console.log(whatTheme)
-// }
